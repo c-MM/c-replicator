@@ -81,13 +81,19 @@ difference(){
 	translate([ 160,    1,   0]) te_mate_n_lok_3();
 	translate([ 183,    1,   0]) te_mate_n_lok_2();
 }
-translate([  -6,  -12,   0]) cube([ 210,  2, 40], false );
+difference(){
+	translate([  -6,  -12,   0]) cube([ 210,  2, 40], false );
+	translate([  14,   -5,  15]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
+	translate([  99,   -5,  30]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
+	translate([ 180,   -5,  15]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
+}
 
 translate([  -6,  -12,   0]) rotate([90, 0, 90]) triangle(12,12,210);
 translate([  -6,   46.36, 2]) rotate([90, 0, 90]) triangle( 4, 6.63,210);
 translate([  -6,  -12,  37.3]) rotate([90, 0, 90]) triangle( 4, 6.63,210);
 translate([  -6,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
 translate([ 202,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
+
 
 //triangle_points =[[0,0],[100,0],[0,100],[10,10],[80,10],[10,80]];
 //triangle_paths =[[0,1,2],[3,4,5]];

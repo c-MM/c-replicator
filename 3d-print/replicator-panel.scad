@@ -84,13 +84,13 @@ difference(){
 difference(){
 	translate([  -6,  -12,   0]) cube([ 210,  2, 40], false );
 	translate([  14,   -5,  15]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
-	translate([  99,   -5,  30]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
+	translate([  99,   -5,  28]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
 	translate([ 180,   -5,  15]) rotate([90, 0, 0]) cylinder(r=2.0, h=10);
 }
 
-translate([  -6,  -12,   0]) rotate([90, 0, 90]) triangle(12,12,210);
-translate([  -6,   46.36, 2]) rotate([90, 0, 90]) triangle( 4, 6.63,210);
-translate([  -6,  -12,  37.3]) rotate([90, 0, 90]) triangle( 4, 6.63,210);
-translate([  -6,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
-translate([ 202,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
+translate([  -6,  -12,    0])    rotate([90,   0,   90]) triangle(12, 12,    210);
+translate([  -6,   46.36, 2])    rotate([90,   0,   90]) triangle( 4,  6.63, 210);
+translate([  -6,   -7,   38.17]) rotate([90, 211.1, 90]) triangle( 6.3,3.8,  210);
+translate([  -6,  -10,    2])    rotate([90,   0  , 90]) triangle(38, 63,      2);
+translate([ 202,  -10,    2])    rotate([90,   0,   90]) triangle(38, 63,      2);
 

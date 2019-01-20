@@ -94,8 +94,3 @@ translate([  -6,  -12,  37.3]) rotate([90, 0, 90]) triangle( 4, 6.63,210);
 translate([  -6,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
 translate([ 202,  -10,   2]) rotate([90, 0, 90]) triangle(38,63,  2);
 
-
-//triangle_points =[[0,0],[100,0],[0,100],[10,10],[80,10],[10,80]];
-//triangle_paths =[[0,1,2],[3,4,5]];
-//polygon(triangle_points,triangle_paths,10);
-

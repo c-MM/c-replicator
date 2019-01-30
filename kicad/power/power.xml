@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/mm/c-replicator/power/power.sch</source>
+    <date>Mi 15 Mär 2017 13:45:30 CET</date>
+    <tool>Eeschema 4.0.2+dfsg1-2~bpo8+1-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>replicator motor control board</title>
+        <company>c-base e.V.</company>
+        <rev>3.0</rev>
+        <date>2016-07-19</date>
+        <source>power.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="R16">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BAD47</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BB2BB</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>Motor</value>
+      <footprint>replicator:Akl_Ria_230_10</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C100/AKL230%23RIA.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">AKL 230-10</field>
+      </fields>
+      <libsource lib="replicator" part="CONN_10"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC1B3</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC4EF</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC593</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC649</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC6BD</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC80A</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC86D</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>FTR K1CK005W</value>
+      <footprint>replicator:Relais_1X</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C300/RELAIS-FTRK1.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">FTR K1CK005W</field>
+      </fields>
+      <libsource lib="replicator" part="RELAY-1XCHANCE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BC94F</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BCF9C</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD15C</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD162</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD566</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD56C</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD572</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>VDR 30V</value>
+      <footprint>replicator:R_1206_HandSoldering</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B400/VC%201206_Serie.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">VC 1206-30</field>
+      </fields>
+      <libsource lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BD578</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>ULN2803D</value>
+      <footprint>replicator:SOIC-18_7.5x11.6mm_Pitch1.27mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A200/ULN2803.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">ULN 2803 D</field>
+      </fields>
+      <libsource lib="replicator" part="ULN2803D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BE2C6</tstamp>
+    </comp>
+    <comp ref="OK1">
+      <value>MOC3020</value>
+      <footprint>replicator:MOC_3020</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A200/DS_MOC3020-M.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">MOC 3020 SMD</field>
+      </fields>
+      <libsource lib="replicator" part="MOC3023M"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BFDC9</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>BTA 16/400B</value>
+      <footprint>replicator:TO220_VERT</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A400/BTA16.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">BTA 16/400B</field>
+      </fields>
+      <libsource lib="replicator" part="TRIAC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578BFEC5</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>390</value>
+      <footprint>replicator:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">SMD-0603 390</field>
+      </fields>
+      <libsource lib="replicator" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C01D1</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>6.3A</value>
+      <footprint>replicator:Fuse_5mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C400/RND_FUSE_HOLDERS_PCB_OPEN_ENG_TDS.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">RND 170-00001</field>
+      </fields>
+      <libsource lib="replicator" part="FUSE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C0265</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>390</value>
+      <footprint>replicator:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">SMD-0603 390</field>
+      </fields>
+      <libsource lib="replicator" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C04CE</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>replicator:LED-5MM</footprint>
+      <fields>
+        <field name="Reichelt">LED 5MM ST RT</field>
+      </fields>
+      <libsource lib="replicator" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C07EE</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>100</value>
+      <footprint>replicator:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">SMD-0603 100</field>
+      </fields>
+      <libsource lib="replicator" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C0855</tstamp>
+    </comp>
+    <comp ref="RP1">
+      <value>3K3</value>
+      <footprint>replicator:R_Array_Convex_4x1206</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">BCN16 3,3K</field>
+      </fields>
+      <libsource lib="replicator" part="R_PACK4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C1077</tstamp>
+    </comp>
+    <comp ref="RP2">
+      <value>3K3</value>
+      <footprint>replicator:R_Array_Convex_4x1206</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">BCN16 3,3K</field>
+      </fields>
+      <libsource lib="replicator" part="R_PACK4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C113C</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>PCF8574AT</value>
+      <footprint>replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PCF 8574 AT</field>
+      </fields>
+      <libsource lib="replicator" part="PCF8574A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C1362</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>replicator:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">X7R-G0603 100N</field>
+      </fields>
+      <libsource lib="replicator" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C257A</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>ULN2803D</value>
+      <footprint>replicator:SOIC-18_7.5x11.6mm_Pitch1.27mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A200/ULN2803.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">ULN 2803 D</field>
+      </fields>
+      <libsource lib="replicator" part="ULN2803D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C3A0F</tstamp>
+    </comp>
+    <comp ref="RP3">
+      <value>3K3</value>
+      <footprint>replicator:R_Array_Convex_4x1206</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">BCN16 3,3K</field>
+      </fields>
+      <libsource lib="replicator" part="R_PACK4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C3A15</tstamp>
+    </comp>
+    <comp ref="RP4">
+      <value>3K3</value>
+      <footprint>replicator:R_Array_Convex_4x1206</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">BCN16 3,3K</field>
+      </fields>
+      <libsource lib="replicator" part="R_PACK4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C3A21</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>PCF8574AT</value>
+      <footprint>replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PCF 8574 AT</field>
+      </fields>
+      <libsource lib="replicator" part="PCF8574A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C3A27</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>replicator:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">X7R-G0603 100N</field>
+      </fields>
+      <libsource lib="replicator" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C3A5B</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>4538B</value>
+      <footprint>replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/A200/smd_4538.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">SMD 4538</field>
+      </fields>
+      <libsource lib="replicator" part="4528"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578C9FE1</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100u</value>
+      <footprint>replicator:c_elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Reichelt">VF 100/16 P-D</field>
+      </fields>
+      <libsource lib="replicator" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CA533</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>1M</value>
+      <footprint>replicator:Potentiometer_Bourns_3296W_3-8Zoll_Inline_ScrewUp</footprint>
+      <fields>
+        <field name="Reichelt">64W-1,0M</field>
+      </fields>
+      <libsource lib="replicator" part="POT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CA5A6</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>LED</value>
+      <footprint>replicator:PSS254-3G</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C151/PSS254%23IMP.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PSS 254/3G</field>
+      </fields>
+      <libsource lib="replicator" part="CONN_3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCA43</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>Expansion</value>
+      <footprint>replicator:PSS254-5G</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C151/PSS254%23IMP.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PSS 254/5G</field>
+      </fields>
+      <libsource lib="replicator" part="CONN_5"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCAB8</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>Power</value>
+      <footprint>replicator:PSS254-5G</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C151/PSS254%23IMP.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PSS 254/3G</field>
+      </fields>
+      <libsource lib="replicator" part="CONN_5"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCB23</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>I2C</value>
+      <footprint>replicator:PSS254-3G</footprint>
+      <datasheet>http://cdn-reichelt.de/documents/datenblatt/C151/PSS254%23IMP.pdf</datasheet>
+      <fields>
+        <field name="Reichelt">PSS 254/3G</field>
+      </fields>
+      <libsource lib="replicator" part="CONN_3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCC1A</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>470</value>
+      <footprint>replicator:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">SMD-0603 100</field>
+      </fields>
+      <libsource lib="replicator" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCCE2</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>470</value>
+      <footprint>replicator:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="Reichelt">SMD-0603 100</field>
+      </fields>
+      <libsource lib="replicator" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578CCF46</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100u</value>
+      <footprint>replicator:c_elec_6.3x5.8</footprint>
+      <fields>
+        <field name="Reichelt">VF 100/16 P-D</field>
+      </fields>
+      <libsource lib="replicator" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D1FF2</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="replicator" part="4528">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">4528</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CX" type="input"/>
+        <pin num="2" name="RC" type="input"/>
+        <pin num="3" name="R" type="input"/>
+        <pin num="4" name="Clk+" type="input"/>
+        <pin num="5" name="Clk-" type="input"/>
+        <pin num="6" name="Q" type="output"/>
+        <pin num="7" name="~Q" type="output"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="~Q" type="output"/>
+        <pin num="10" name="Q" type="output"/>
+        <pin num="11" name="Clk-" type="input"/>
+        <pin num="12" name="Clk+" type="input"/>
+        <pin num="13" name="R" type="input"/>
+        <pin num="14" name="RC" type="input"/>
+        <pin num="15" name="CX" type="input"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="CONN_10">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="CONN_3">
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">CONN_3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="PM" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="CONN_5">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="MOC3023M">
+      <fields>
+        <field name="Reference">OK</field>
+        <field name="Value">MOC3023M</field>
+        <field name="Footprint">optocoupler-2-DIL06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="4" name="A1" type="passive"/>
+        <pin num="6" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="PCF8574">
+      <aliases>
+        <alias>PCF8574A</alias>
+      </aliases>
+      <description>8 Bit Port/Expander to I2C Bus, DIP/SOIC-16</description>
+      <docs>http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf</docs>
+      <footprints>
+        <fp>DIP*</fp>
+        <fp>PDIP*</fp>
+        <fp>SO*</fp>
+        <fp>SOIC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PCF8574</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A0" type="input"/>
+        <pin num="2" name="A1" type="input"/>
+        <pin num="3" name="A2" type="input"/>
+        <pin num="4" name="P0" type="BiDi"/>
+        <pin num="5" name="P1" type="BiDi"/>
+        <pin num="6" name="P2" type="BiDi"/>
+        <pin num="7" name="P3" type="BiDi"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="P4" type="BiDi"/>
+        <pin num="10" name="P5" type="BiDi"/>
+        <pin num="11" name="P6" type="BiDi"/>
+        <pin num="12" name="P7" type="BiDi"/>
+        <pin num="13" name="~INT~" type="openCol"/>
+        <pin num="14" name="SCL" type="input"/>
+        <pin num="15" name="SDA" type="BiDi"/>
+        <pin num="16" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="POT">
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="RELAY-1XCHANCE">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RELAY-1XCHANCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Spule_A" type="passive"/>
+        <pin num="2" name="NO" type="passive"/>
+        <pin num="3" name="Spule_B" type="passive"/>
+        <pin num="4" name="NC" type="passive"/>
+        <pin num="5" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="RESISTOR_VOLTAGE_DEPENDEND_VARISTOR">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RESISTOR_VOLTAGE_DEPENDEND_VARISTOR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="R_PACK4">
+      <description>4 resistors Pack</description>
+      <fields>
+        <field name="Reference">RP</field>
+        <field name="Value">R_PACK4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="R4" type="passive"/>
+        <pin num="6" name="R3" type="passive"/>
+        <pin num="7" name="R2" type="passive"/>
+        <pin num="8" name="R1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="TRIAC">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TRIAC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="replicator" part="ULN2803D">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ULN2803D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I1" type="input"/>
+        <pin num="2" name="I2" type="input"/>
+        <pin num="3" name="I3" type="input"/>
+        <pin num="4" name="I4" type="input"/>
+        <pin num="5" name="I5" type="input"/>
+        <pin num="6" name="I6" type="input"/>
+        <pin num="7" name="I7" type="input"/>
+        <pin num="8" name="I8" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="COM" type="input"/>
+        <pin num="11" name="O8" type="passive"/>
+        <pin num="12" name="O7" type="openCol"/>
+        <pin num="13" name="O6" type="openCol"/>
+        <pin num="14" name="O5" type="openCol"/>
+        <pin num="15" name="O4" type="openCol"/>
+        <pin num="16" name="O3" type="openCol"/>
+        <pin num="17" name="O2" type="openCol"/>
+        <pin num="18" name="O1" type="openCol"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="replicator">
+      <uri>replicator.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/M2">
+      <node ref="R7" pin="2"/>
+      <node ref="R15" pin="2"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="2" name="/M6">
+      <node ref="R11" pin="2"/>
+      <node ref="R19" pin="2"/>
+      <node ref="P1" pin="6"/>
+    </net>
+    <net code="3" name="/M5">
+      <node ref="R10" pin="2"/>
+      <node ref="P1" pin="5"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="4" name="/M4">
+      <node ref="R17" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="5" name="/M3">
+      <node ref="R16" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="6" name="/M7">
+      <node ref="R12" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="P1" pin="7"/>
+    </net>
+    <net code="7" name="/M1">
+      <node ref="R6" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="8" name="Net-(R8-Pad5)">
+      <node ref="R9" pin="4"/>
+      <node ref="R8" pin="5"/>
+    </net>
+    <net code="9" name="Net-(R12-Pad5)">
+      <node ref="R12" pin="5"/>
+      <node ref="R13" pin="4"/>
+    </net>
+    <net code="10" name="Net-(R11-Pad5)">
+      <node ref="R12" pin="4"/>
+      <node ref="R11" pin="5"/>
+    </net>
+    <net code="11" name="Net-(R10-Pad5)">
+      <node ref="R11" pin="4"/>
+      <node ref="R10" pin="5"/>
+    </net>
+    <net code="12" name="Net-(R10-Pad4)">
+      <node ref="R9" pin="5"/>
+      <node ref="R10" pin="4"/>
+    </net>
+    <net code="13" name="Net-(R7-Pad5)">
+      <node ref="R8" pin="4"/>
+      <node ref="R7" pin="5"/>
+    </net>
+    <net code="14" name="Net-(R6-Pad5)">
+      <node ref="R6" pin="5"/>
+      <node ref="R7" pin="4"/>
+    </net>
+    <net code="15" name="/M8">
+      <node ref="P1" pin="8"/>
+      <node ref="R21" pin="2"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="16" name="Net-(D1-Pad2)">
+      <node ref="OK1" pin="1"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="17" name="Net-(RP1-Pad4)">
+      <node ref="RP1" pin="4"/>
+      <node ref="U2" pin="4"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="18" name="Net-(RP1-Pad3)">
+      <node ref="U5" pin="2"/>
+      <node ref="RP1" pin="3"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="19" name="Net-(RP1-Pad2)">
+      <node ref="U5" pin="3"/>
+      <node ref="RP1" pin="2"/>
+      <node ref="U2" pin="6"/>
+    </net>
+    <net code="20" name="Net-(RP1-Pad1)">
+      <node ref="U5" pin="4"/>
+      <node ref="U2" pin="7"/>
+      <node ref="RP1" pin="1"/>
+    </net>
+    <net code="21" name="Net-(F1-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="U4" pin="2"/>
+      <node ref="F1" pin="1"/>
+    </net>
+    <net code="22" name="Net-(OK1-Pad6)">
+      <node ref="R5" pin="2"/>
+      <node ref="OK1" pin="6"/>
+    </net>
+    <net code="23" name="Net-(R13-Pad5)">
+      <node ref="R13" pin="5"/>
+      <node ref="R3" pin="1"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="24" name="/K1_1">
+      <node ref="K1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="25" name="Net-(P3-Pad5)">
+      <node ref="P3" pin="5"/>
+    </net>
+    <net code="26" name="/P4_2">
+      <node ref="P4" pin="2"/>
+      <node ref="U6" pin="15"/>
+    </net>
+    <net code="27" name="/P4_3">
+      <node ref="U6" pin="14"/>
+      <node ref="P4" pin="3"/>
+    </net>
+    <net code="28" name="/P4_4">
+      <node ref="U6" pin="13"/>
+      <node ref="P4" pin="4"/>
+    </net>
+    <net code="29" name="/P4_5">
+      <node ref="U6" pin="12"/>
+      <node ref="P4" pin="5"/>
+    </net>
+    <net code="30" name="Net-(P3-Pad1)">
+      <node ref="P3" pin="1"/>
+    </net>
+    <net code="31" name="/SCL">
+      <node ref="U3" pin="14"/>
+      <node ref="P2" pin="1"/>
+      <node ref="U2" pin="14"/>
+    </net>
+    <net code="32" name="/SDA">
+      <node ref="U3" pin="15"/>
+      <node ref="U2" pin="15"/>
+      <node ref="P2" pin="2"/>
+    </net>
+    <net code="33" name="GND">
+      <node ref="C4" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U6" pin="9"/>
+      <node ref="U5" pin="9"/>
+      <node ref="C5" pin="1"/>
+      <node ref="U3" pin="8"/>
+      <node ref="U3" pin="1"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U1" pin="12"/>
+      <node ref="U1" pin="8"/>
+      <node ref="C2" pin="2"/>
+      <node ref="P3" pin="2"/>
+      <node ref="P3" pin="4"/>
+      <node ref="P2" pin="3"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="34" name="Net-(R1-Pad2)">
+      <node ref="U6" pin="18"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="35" name="/K1_2">
+      <node ref="K1" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="36" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="U6" pin="17"/>
+    </net>
+    <net code="37" name="Net-(R7-Pad3)">
+      <node ref="R7" pin="3"/>
+      <node ref="U5" pin="17"/>
+    </net>
+    <net code="38" name="Net-(R10-Pad3)">
+      <node ref="U5" pin="14"/>
+      <node ref="R10" pin="3"/>
+    </net>
+    <net code="39" name="Net-(R9-Pad3)">
+      <node ref="R9" pin="3"/>
+      <node ref="U5" pin="15"/>
+    </net>
+    <net code="40" name="Net-(R8-Pad3)">
+      <node ref="R8" pin="3"/>
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="41" name="+5V">
+      <node ref="R8" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="RP4" pin="5"/>
+      <node ref="R7" pin="1"/>
+      <node ref="RP4" pin="6"/>
+      <node ref="R9" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="RP3" pin="5"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="RP3" pin="7"/>
+      <node ref="RP3" pin="6"/>
+      <node ref="U2" pin="16"/>
+      <node ref="K1" pin="3"/>
+      <node ref="P3" pin="3"/>
+      <node ref="RP4" pin="7"/>
+      <node ref="U2" pin="2"/>
+      <node ref="U2" pin="1"/>
+      <node ref="RP2" pin="8"/>
+      <node ref="C4" pin="2"/>
+      <node ref="RP2" pin="7"/>
+      <node ref="RP2" pin="6"/>
+      <node ref="U2" pin="3"/>
+      <node ref="RP2" pin="5"/>
+      <node ref="R13" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="U3" pin="16"/>
+      <node ref="R12" pin="1"/>
+      <node ref="RP4" pin="8"/>
+      <node ref="U3" pin="2"/>
+      <node ref="RP3" pin="8"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="U1" pin="16"/>
+      <node ref="U6" pin="10"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C2" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U5" pin="10"/>
+      <node ref="RP1" pin="8"/>
+      <node ref="RP1" pin="7"/>
+      <node ref="RP1" pin="6"/>
+      <node ref="RP1" pin="5"/>
+    </net>
+    <net code="42" name="Net-(R6-Pad3)">
+      <node ref="R6" pin="3"/>
+      <node ref="U5" pin="18"/>
+    </net>
+    <net code="43" name="Net-(R13-Pad3)">
+      <node ref="R13" pin="3"/>
+      <node ref="U5" pin="11"/>
+    </net>
+    <net code="44" name="Net-(R12-Pad3)">
+      <node ref="R12" pin="3"/>
+      <node ref="U5" pin="12"/>
+    </net>
+    <net code="45" name="Net-(R11-Pad3)">
+      <node ref="R11" pin="3"/>
+      <node ref="U5" pin="13"/>
+    </net>
+    <net code="46" name="Net-(U1-Pad1)">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="47" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="48" name="Net-(U1-Pad10)">
+      <node ref="U6" pin="8"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="49" name="Net-(RP4-Pad1)">
+      <node ref="U3" pin="12"/>
+      <node ref="RP4" pin="1"/>
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="50" name="Net-(C1-Pad2)">
+      <node ref="U1" pin="15"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="51" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1"/>
+      <node ref="U1" pin="14"/>
+      <node ref="RV1" pin="2"/>
+    </net>
+    <net code="52" name="Net-(OK1-Pad2)">
+      <node ref="OK1" pin="2"/>
+      <node ref="U6" pin="11"/>
+    </net>
+    <net code="53" name="Net-(U1-Pad6)">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="54" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="55" name="Net-(RP3-Pad4)">
+      <node ref="U6" pin="1"/>
+      <node ref="U3" pin="4"/>
+      <node ref="RP3" pin="4"/>
+    </net>
+    <net code="56" name="Net-(RP3-Pad3)">
+      <node ref="RP3" pin="3"/>
+      <node ref="U6" pin="2"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="57" name="Net-(RP2-Pad4)">
+      <node ref="U2" pin="9"/>
+      <node ref="U5" pin="5"/>
+      <node ref="RP2" pin="4"/>
+    </net>
+    <net code="58" name="Net-(RP2-Pad3)">
+      <node ref="RP2" pin="3"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="59" name="Net-(RP2-Pad2)">
+      <node ref="RP2" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="60" name="Net-(RP2-Pad1)">
+      <node ref="U2" pin="12"/>
+      <node ref="RP2" pin="1"/>
+      <node ref="U5" pin="8"/>
+    </net>
+    <net code="61" name="Net-(RP3-Pad2)">
+      <node ref="U6" pin="3"/>
+      <node ref="RP3" pin="2"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="62" name="Net-(RP4-Pad2)">
+      <node ref="RP4" pin="2"/>
+      <node ref="U1" pin="13"/>
+      <node ref="U3" pin="11"/>
+    </net>
+    <net code="63" name="Net-(RP3-Pad1)">
+      <node ref="U3" pin="7"/>
+      <node ref="U6" pin="4"/>
+      <node ref="RP3" pin="1"/>
+    </net>
+    <net code="64" name="Net-(RP4-Pad4)">
+      <node ref="U6" pin="5"/>
+      <node ref="U3" pin="9"/>
+      <node ref="RP4" pin="4"/>
+    </net>
+    <net code="65" name="Net-(RP4-Pad3)">
+      <node ref="U3" pin="10"/>
+      <node ref="U6" pin="6"/>
+      <node ref="RP4" pin="3"/>
+    </net>
+    <net code="66" name="/P4_1">
+      <node ref="U6" pin="16"/>
+      <node ref="P4" pin="1"/>
+    </net>
+    <net code="67" name="Net-(D1-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="68" name="Net-(OK1-Pad4)">
+      <node ref="OK1" pin="4"/>
+      <node ref="R3" pin="2"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="69" name="/VAC">
+      <node ref="P1" pin="9"/>
+      <node ref="F1" pin="2"/>
+      <node ref="R16" pin="1"/>
+      <node ref="R14" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="R20" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="R18" pin="1"/>
+      <node ref="R19" pin="1"/>
+      <node ref="P1" pin="10"/>
+    </net>
+    <net code="70" name="Net-(R6-Pad4)">
+      <node ref="R6" pin="4"/>
+    </net>
+    <net code="71" name="Net-(U3-Pad13)">
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="72" name="Net-(U6-Pad7)">
+      <node ref="U6" pin="7"/>
+    </net>
+    <net code="74" name="Net-(RV1-Pad3)">
+      <node ref="RV1" pin="3"/>
+    </net>
+    <net code="75" name="Net-(U1-Pad9)">
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="76" name="Net-(U2-Pad13)">
+      <node ref="U2" pin="13"/>
+    </net>
+  </nets>
+</export>

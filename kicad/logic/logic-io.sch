@@ -1,0 +1,1439 @@
+EESchema Schematic File Version 4
+LIBS:logic-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "replicator motor and slot control schematics"
+Date "2019-01-30"
+Rev "3.0"
+Comp "c-base e.V."
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L replicator:+5V #PWR054
+U 1 1 53CCEC59
+P 7550 2550
+F 0 "#PWR054" H 7550 2500 20  0001 C CNN
+F 1 "+5V" H 7550 2650 30  0000 C CNN
+F 2 "" H 7550 2550 60  0001 C CNN
+F 3 "" H 7550 2550 60  0001 C CNN
+	1    7550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR055
+U 1 1 53CCEBF6
+P 10450 1300
+F 0 "#PWR055" H 10450 1250 20  0001 C CNN
+F 1 "+5V" H 10450 1400 30  0000 C CNN
+F 2 "" H 10450 1300 60  0001 C CNN
+F 3 "" H 10450 1300 60  0001 C CNN
+	1    10450 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR056
+U 1 1 53CCEBE8
+P 9200 5900
+F 0 "#PWR056" H 9200 5850 20  0001 C CNN
+F 1 "+5V" H 9200 6000 30  0000 C CNN
+F 2 "" H 9200 5900 60  0001 C CNN
+F 3 "" H 9200 5900 60  0001 C CNN
+	1    9200 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR057
+U 1 1 53CCEBDC
+P 6550 4300
+F 0 "#PWR057" H 6550 4250 20  0001 C CNN
+F 1 "+5V" H 6550 4400 30  0000 C CNN
+F 2 "" H 6550 4300 60  0001 C CNN
+F 3 "" H 6550 4300 60  0001 C CNN
+	1    6550 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR058
+U 1 1 53CCEBC8
+P 5500 5300
+F 0 "#PWR058" H 5500 5250 20  0001 C CNN
+F 1 "+5V" H 5500 5400 30  0000 C CNN
+F 2 "" H 5500 5300 60  0001 C CNN
+F 3 "" H 5500 5300 60  0001 C CNN
+	1    5500 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR059
+U 1 1 53CCEBBE
+P 2700 5150
+F 0 "#PWR059" H 2700 5100 20  0001 C CNN
+F 1 "+5V" H 2700 5250 30  0000 C CNN
+F 2 "" H 2700 5150 60  0001 C CNN
+F 3 "" H 2700 5150 60  0001 C CNN
+	1    2700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR060
+U 1 1 53CCEBB2
+P 2200 5500
+F 0 "#PWR060" H 2200 5450 20  0001 C CNN
+F 1 "+5V" H 2200 5600 30  0000 C CNN
+F 2 "" H 2200 5500 60  0001 C CNN
+F 3 "" H 2200 5500 60  0001 C CNN
+	1    2200 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR061
+U 1 1 53CCEBA8
+P 1500 4000
+F 0 "#PWR061" H 1500 3950 20  0001 C CNN
+F 1 "+5V" H 1500 4100 30  0000 C CNN
+F 2 "" H 1500 4000 60  0001 C CNN
+F 3 "" H 1500 4000 60  0001 C CNN
+	1    1500 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR062
+U 1 1 53CCEB9E
+P 2700 2900
+F 0 "#PWR062" H 2700 2850 20  0001 C CNN
+F 1 "+5V" H 2700 3000 30  0000 C CNN
+F 2 "" H 2700 2900 60  0001 C CNN
+F 3 "" H 2700 2900 60  0001 C CNN
+	1    2700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR063
+U 1 1 53CCEB8F
+P 1550 1700
+F 0 "#PWR063" H 1550 1650 20  0001 C CNN
+F 1 "+5V" H 1550 1800 30  0000 C CNN
+F 2 "" H 1550 1700 60  0001 C CNN
+F 3 "" H 1550 1700 60  0001 C CNN
+	1    1550 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR064
+U 1 1 53CCEB86
+P 2700 700
+F 0 "#PWR064" H 2700 650 20  0001 C CNN
+F 1 "+5V" H 2700 800 30  0000 C CNN
+F 2 "" H 2700 700 60  0001 C CNN
+F 3 "" H 2700 700 60  0001 C CNN
+	1    2700 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:R R59
+U 1 1 53CBDBDE
+P 9300 5700
+AR Path="/53CBDBDE" Ref="R59"  Part="1" 
+AR Path="/5345634F/53CBDBDE" Ref="R59"  Part="1" 
+F 0 "R59" V 9350 5450 50  0000 C CNN
+F 1 "330" V 9300 5700 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5700 50  0001 C CNN
+F 3 "" H 9300 5700 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5700 60  0001 C CNN "Reichelt"
+	1    9300 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R58
+U 1 1 53CBDBDB
+P 9300 5600
+AR Path="/53CBDBDB" Ref="R58"  Part="1" 
+AR Path="/5345634F/53CBDBDB" Ref="R58"  Part="1" 
+F 0 "R58" V 9350 5350 50  0000 C CNN
+F 1 "330" V 9300 5600 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5600 50  0001 C CNN
+F 3 "" H 9300 5600 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5600 60  0001 C CNN "Reichelt"
+	1    9300 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R57
+U 1 1 53CBDBD8
+P 9300 5500
+AR Path="/53CBDBD8" Ref="R57"  Part="1" 
+AR Path="/5345634F/53CBDBD8" Ref="R57"  Part="1" 
+F 0 "R57" V 9350 5250 50  0000 C CNN
+F 1 "330" V 9300 5500 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5500 50  0001 C CNN
+F 3 "" H 9300 5500 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5500 60  0001 C CNN "Reichelt"
+	1    9300 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R56
+U 1 1 53CBDBD5
+P 9300 5400
+AR Path="/53CBDBD5" Ref="R56"  Part="1" 
+AR Path="/5345634F/53CBDBD5" Ref="R56"  Part="1" 
+F 0 "R56" V 9350 5150 50  0000 C CNN
+F 1 "330" V 9300 5400 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5400 50  0001 C CNN
+F 3 "" H 9300 5400 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5400 60  0001 C CNN "Reichelt"
+	1    9300 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R55
+U 1 1 53CBDBD2
+P 9300 5300
+AR Path="/53CBDBD2" Ref="R55"  Part="1" 
+AR Path="/5345634F/53CBDBD2" Ref="R55"  Part="1" 
+F 0 "R55" V 9350 5050 50  0000 C CNN
+F 1 "330" V 9300 5300 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5300 50  0001 C CNN
+F 3 "" H 9300 5300 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5300 60  0001 C CNN "Reichelt"
+	1    9300 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R54
+U 1 1 53CBDBD0
+P 9300 5200
+AR Path="/53CBDBD0" Ref="R54"  Part="1" 
+AR Path="/5345634F/53CBDBD0" Ref="R54"  Part="1" 
+F 0 "R54" V 9350 4950 50  0000 C CNN
+F 1 "330" V 9300 5200 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5200 50  0001 C CNN
+F 3 "" H 9300 5200 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5200 60  0001 C CNN "Reichelt"
+	1    9300 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R53
+U 1 1 53CBDBCC
+P 9300 5100
+AR Path="/53CBDBCC" Ref="R53"  Part="1" 
+AR Path="/5345634F/53CBDBCC" Ref="R53"  Part="1" 
+F 0 "R53" V 9350 4850 50  0000 C CNN
+F 1 "330" V 9300 5100 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5100 50  0001 C CNN
+F 3 "" H 9300 5100 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5100 60  0001 C CNN "Reichelt"
+	1    9300 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R R52
+U 1 1 53CBDAE5
+P 9300 5000
+AR Path="/53CBDAE5" Ref="R52"  Part="1" 
+AR Path="/5345634F/53CBDAE5" Ref="R52"  Part="1" 
+F 0 "R52" V 9350 4750 50  0000 C CNN
+F 1 "330" V 9300 5000 50  0000 C CNN
+F 2 "replicator:R_0603_HandSoldering" V 9400 5000 50  0001 C CNN
+F 3 "" H 9300 5000 60  0001 C CNN
+F 4 "SMD-0603 330" H 9300 5000 60  0001 C CNN "Reichelt"
+	1    9300 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:GND #PWR065
+U 1 1 53C53F6F
+P 9900 2550
+F 0 "#PWR065" H 9900 2550 30  0001 C CNN
+F 1 "GND" H 9900 2480 30  0001 C CNN
+F 2 "" H 9900 2550 60  0001 C CNN
+F 3 "" H 9900 2550 60  0001 C CNN
+	1    9900 2550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6950 1750
+NoConn ~ 7450 1950
+NoConn ~ 7450 1850
+$Comp
+L replicator:GND #PWR066
+U 1 1 53C53BBE
+P 7500 1550
+F 0 "#PWR066" H 7500 1550 30  0001 C CNN
+F 1 "GND" H 7500 1480 30  0001 C CNN
+F 2 "" H 7500 1550 60  0001 C CNN
+F 3 "" H 7500 1550 60  0001 C CNN
+	1    7500 1550
+	0    -1   -1   0   
+$EndComp
+Text Label 6850 2050 2    60   ~ 0
+EMPTY-SW-P7
+Text Label 6850 2150 2    60   ~ 0
+EMPTY-SW-P6
+Text Label 7550 1250 0    60   ~ 0
+EMPTY-SW-P5
+Text Label 6850 1350 2    60   ~ 0
+EMPTY-SW-P4
+Text Label 7550 1450 0    60   ~ 0
+EMPTY-SW-P3
+Text Label 6850 1650 2    60   ~ 0
+EMPTY-SW-P2
+Text Label 7550 1750 0    60   ~ 0
+EMPTY-SW-P1
+Text Label 6850 1950 2    60   ~ 0
+EMPTY-SW-P0
+Text Label 6850 1250 2    60   ~ 0
+MOT-POS-P0
+Text Label 7550 1350 0    60   ~ 0
+MOT-POS-P1
+Text Label 6850 1850 2    60   ~ 0
+MOT-POS-P2
+Text Label 7550 1650 0    60   ~ 0
+MOT-POS-P3
+Text Label 6850 1550 2    60   ~ 0
+MOT-POS-P4
+Text Label 6850 1450 2    60   ~ 0
+MOT-POS-P5
+Text Label 7550 2150 0    60   ~ 0
+MOT-POS-P6
+Text Label 7550 2050 0    60   ~ 0
+MOT-POS-P7
+$Comp
+L replicator:GND #PWR067
+U 1 1 53C5399E
+P 6750 2700
+F 0 "#PWR067" H 6750 2700 30  0001 C CNN
+F 1 "GND" H 6750 2630 30  0001 C CNN
+F 2 "" H 6750 2700 60  0001 C CNN
+F 3 "" H 6750 2700 60  0001 C CNN
+	1    6750 2700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7450 2850
+NoConn ~ 6950 2850
+Text Label 6850 3250 2    60   ~ 0
+USER-BTN-P0
+Text Label 7550 3250 0    60   ~ 0
+USER-BTN-P1
+Text Label 6850 3150 2    60   ~ 0
+USER-BTN-P2
+Text Label 7550 3150 0    60   ~ 0
+USER-BTN-P3
+Text Label 6850 3050 2    60   ~ 0
+USER-BTN-P4
+Text Label 7550 3050 0    60   ~ 0
+USER-BTN-P5
+Text Label 6850 2950 2    60   ~ 0
+USER-BTN-P6
+Text Label 7550 2950 0    60   ~ 0
+USER-BTN-P7
+NoConn ~ 6950 3450
+NoConn ~ 6950 3350
+NoConn ~ 7450 3350
+NoConn ~ 7450 3450
+Text Label 6850 3850 2    60   ~ 0
+USER-LED-P0
+Text Label 7550 3850 0    60   ~ 0
+USER-LED-P1
+Text Label 6850 3750 2    60   ~ 0
+USER-LED-P2
+Text Label 7550 3750 0    60   ~ 0
+USER-LED-P3
+Text Label 6850 3650 2    60   ~ 0
+USER-LED-P4
+Text Label 7550 3650 0    60   ~ 0
+USER-LED-P5
+Text Label 6850 3550 2    60   ~ 0
+USER-LED-P6
+Text Label 7550 3550 0    60   ~ 0
+USER-LED-P7
+Text Label 9600 5700 0    60   ~ 0
+USER-LED-P7
+Text Label 9600 5600 0    60   ~ 0
+USER-LED-P6
+Text Label 9600 5500 0    60   ~ 0
+USER-LED-P5
+Text Label 9600 5400 0    60   ~ 0
+USER-LED-P4
+Text Label 9600 5300 0    60   ~ 0
+USER-LED-P3
+Text Label 9600 5200 0    60   ~ 0
+USER-LED-P2
+Text Label 9600 5100 0    60   ~ 0
+USER-LED-P1
+Text Label 9600 5000 0    60   ~ 0
+USER-LED-P0
+$Comp
+L replicator:GND #PWR068
+U 1 1 53C53569
+P 7650 5950
+F 0 "#PWR068" H 7650 5950 30  0001 C CNN
+F 1 "GND" H 7650 5880 30  0001 C CNN
+F 2 "" H 7650 5950 60  0001 C CNN
+F 3 "" H 7650 5950 60  0001 C CNN
+	1    7650 5950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5550 5800
+$Comp
+L replicator:GND #PWR069
+U 1 1 53C5315C
+P 5500 5550
+F 0 "#PWR069" H 5500 5550 30  0001 C CNN
+F 1 "GND" H 5500 5480 30  0001 C CNN
+F 2 "" H 5500 5550 60  0001 C CNN
+F 3 "" H 5500 5550 60  0001 C CNN
+	1    5500 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 5450 5000 0    60   Input ~ 0
+SCL
+Text GLabel 5450 5100 0    60   Input ~ 0
+SDA
+Text GLabel 1600 5950 0    60   Input ~ 0
+SDA
+Text GLabel 1600 5850 0    60   Input ~ 0
+SCL
+NoConn ~ 1700 6650
+Text Label 4050 6550 0    60   ~ 0
+USER-BTN-P7
+Text Label 4050 6450 0    60   ~ 0
+USER-BTN-P6
+Text Label 4050 6350 0    60   ~ 0
+USER-BTN-P5
+Text Label 4050 6250 0    60   ~ 0
+USER-BTN-P4
+Text Label 4050 6150 0    60   ~ 0
+USER-BTN-P3
+Text Label 4050 6050 0    60   ~ 0
+USER-BTN-P2
+Text Label 4050 5950 0    60   ~ 0
+USER-BTN-P1
+Text Label 4050 5850 0    60   ~ 0
+USER-BTN-P0
+$Comp
+L replicator:GND #PWR070
+U 1 1 53C52FA6
+P 1650 6400
+F 0 "#PWR070" H 1650 6400 30  0001 C CNN
+F 1 "GND" H 1650 6330 30  0001 C CNN
+F 2 "" H 1650 6400 60  0001 C CNN
+F 3 "" H 1650 6400 60  0001 C CNN
+	1    1650 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:GND #PWR071
+U 1 1 53C52EE5
+P 1650 3900
+F 0 "#PWR071" H 1650 3900 30  0001 C CNN
+F 1 "GND" H 1650 3830 30  0001 C CNN
+F 2 "" H 1650 3900 60  0001 C CNN
+F 3 "" H 1650 3900 60  0001 C CNN
+	1    1650 3900
+	0    1    1    0   
+$EndComp
+Text Label 4050 3600 0    60   ~ 0
+EMPTY-SW-P0
+Text Label 4050 3700 0    60   ~ 0
+EMPTY-SW-P1
+Text Label 4050 3800 0    60   ~ 0
+EMPTY-SW-P2
+Text Label 4050 3900 0    60   ~ 0
+EMPTY-SW-P3
+Text Label 4050 4000 0    60   ~ 0
+EMPTY-SW-P4
+Text Label 4050 4100 0    60   ~ 0
+EMPTY-SW-P5
+Text Label 4050 4200 0    60   ~ 0
+EMPTY-SW-P6
+Text Label 4050 4300 0    60   ~ 0
+EMPTY-SW-P7
+NoConn ~ 1700 4400
+Text GLabel 1600 3600 0    60   Input ~ 0
+SCL
+Text GLabel 1600 3700 0    60   Input ~ 0
+SDA
+Text GLabel 1600 1500 0    60   Input ~ 0
+SDA
+Text GLabel 1600 1400 0    60   Input ~ 0
+SCL
+NoConn ~ 1700 2200
+Text Label 4050 2100 0    60   ~ 0
+MOT-POS-P7
+Text Label 4050 2000 0    60   ~ 0
+MOT-POS-P6
+Text Label 4050 1900 0    60   ~ 0
+MOT-POS-P5
+Text Label 4050 1800 0    60   ~ 0
+MOT-POS-P4
+Text Label 4050 1700 0    60   ~ 0
+MOT-POS-P3
+Text Label 4050 1600 0    60   ~ 0
+MOT-POS-P2
+Text Label 4050 1500 0    60   ~ 0
+MOT-POS-P1
+Text Label 4050 1400 0    60   ~ 0
+MOT-POS-P0
+$Comp
+L replicator:GND #PWR072
+U 1 1 53C52D31
+P 1650 1800
+F 0 "#PWR072" H 1650 1800 30  0001 C CNN
+F 1 "GND" H 1650 1730 30  0001 C CNN
+F 2 "" H 1650 1800 60  0001 C CNN
+F 3 "" H 1650 1800 60  0001 C CNN
+	1    1650 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L replicator:CONN_02X10 P7
+U 1 1 563E98C6
+P 7200 1700
+F 0 "P7" H 7200 2250 50  0000 C CNN
+F 1 "CONN_Mot_Empty" V 7200 1700 50  0000 C CNN
+F 2 "replicator:IDC_Header_Straight_20pins" H 7200 500 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C151/BH1S-XX-L.pdf" H 7200 500 60  0001 C CNN
+F 4 "WSL 20G" H 7200 1700 60  0001 C CNN "Reichelt"
+	1    7200 1700
+	1    0    0    1   
+$EndComp
+$Comp
+L replicator:CONN_02X13 P8
+U 1 1 563E9967
+P 7200 3250
+F 0 "P8" H 7200 3950 50  0000 C CNN
+F 1 "CONN_Button_Led" V 7200 3250 50  0000 C CNN
+F 2 "replicator:IDC_Header_Straight_26pins" H 7200 2100 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C151/BH1S-XX-L.pdf" H 7200 2100 60  0001 C CNN
+F 4 "WSL 26G" H 7200 3250 60  0001 C CNN "Reichelt"
+	1    7200 3250
+	1    0    0    1   
+$EndComp
+$Comp
+L replicator:PCF8574 U9
+U 1 1 563EA141
+P 2200 4000
+AR Path="/563EA141" Ref="U9"  Part="1" 
+AR Path="/5345634F/563EA141" Ref="U9"  Part="1" 
+F 0 "U9" H 2470 4700 60  0000 C CNN
+F 1 "PCF8574AT" H 2590 3302 60  0000 C CNN
+F 2 "replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm" H 2200 4000 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf" H 2200 4000 60  0001 C CNN
+F 4 "PCF 8574 AT" H 2200 4000 60  0001 C CNN "Reichelt"
+	1    2200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:PCF8574 U12
+U 1 1 563EA4B4
+P 2200 6250
+AR Path="/563EA4B4" Ref="U12"  Part="1" 
+AR Path="/5345634F/563EA4B4" Ref="U12"  Part="1" 
+F 0 "U12" H 2470 6950 60  0000 C CNN
+F 1 "PCF8574AT" H 2590 5552 60  0000 C CNN
+F 2 "replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm" H 2200 6250 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf" H 2200 6250 60  0001 C CNN
+F 4 "PCF 8574 AT" H 2200 6250 60  0001 C CNN "Reichelt"
+	1    2200 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:PCF8574 U8
+U 1 1 563EA78D
+P 2200 1800
+AR Path="/563EA78D" Ref="U8"  Part="1" 
+AR Path="/5345634F/563EA78D" Ref="U8"  Part="1" 
+F 0 "U8" H 2470 2500 60  0000 C CNN
+F 1 "PCF8574AT" H 2590 1102 60  0000 C CNN
+F 2 "replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm" H 2200 1800 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf" H 2200 1800 60  0001 C CNN
+F 4 "PCF 8574 AT" H 2200 1800 60  0001 C CNN "Reichelt"
+	1    2200 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:PCF8574 U11
+U 1 1 563EAC32
+P 6050 5400
+AR Path="/563EAC32" Ref="U11"  Part="1" 
+AR Path="/5345634F/563EAC32" Ref="U11"  Part="1" 
+F 0 "U11" H 6320 6100 60  0000 C CNN
+F 1 "PCF8574AT" H 6440 4702 60  0000 C CNN
+F 2 "replicator:SOIC-16_7.5x10.3mm_Pitch1.27mm" H 6050 5400 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A300/PCF8574%23PHI.pdf" H 6050 5400 60  0001 C CNN
+F 4 "PCF 8574 AT" H 6050 5400 60  0001 C CNN "Reichelt"
+	1    6050 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:ULN2803D U10
+U 1 1 563ED01B
+P 8450 5400
+F 0 "U10" H 8200 5950 70  0000 C CNN
+F 1 "ULN2803D" H 8600 4700 70  0000 C CNN
+F 2 "replicator:SOIC-18_7.5x11.6mm_Pitch1.27mm" H 8450 5400 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/A200/ULN2803.pdf" H 8450 5400 60  0001 C CNN
+F 4 "ULN 2803 D" H 8450 5400 60  0001 C CNN "Reichelt"
+	1    8450 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:C C7
+U 1 1 563ED723
+P 10150 1400
+AR Path="/563ED723" Ref="C7"  Part="1" 
+AR Path="/5345634F/563ED723" Ref="C7"  Part="1" 
+F 0 "C7" V 10000 1350 50  0000 L CNN
+F 1 "100nF" V 10100 1200 50  0000 L CNN
+F 2 "replicator:C_0603_HandSoldering" H 10150 1400 60  0001 C CNN
+F 3 "" H 10150 1400 60  0000 C CNN
+F 4 "X7R-G0603 100N" V 10150 1400 60  0001 C CNN "Reichelt"
+	1    10150 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L replicator:C C8
+U 1 1 563EDB9A
+P 10150 1750
+AR Path="/563EDB9A" Ref="C8"  Part="1" 
+AR Path="/5345634F/563EDB9A" Ref="C8"  Part="1" 
+F 0 "C8" V 10000 1700 50  0000 L CNN
+F 1 "100nF" V 10100 1550 50  0000 L CNN
+F 2 "replicator:C_0603_HandSoldering" H 10150 1750 60  0001 C CNN
+F 3 "" H 10150 1750 60  0000 C CNN
+F 4 "X7R-G0603 100N" V 10150 1750 60  0001 C CNN "Reichelt"
+	1    10150 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L replicator:C C9
+U 1 1 563EDC51
+P 10150 2100
+AR Path="/563EDC51" Ref="C9"  Part="1" 
+AR Path="/5345634F/563EDC51" Ref="C9"  Part="1" 
+F 0 "C9" V 10000 2050 50  0000 L CNN
+F 1 "100nF" V 10100 1900 50  0000 L CNN
+F 2 "replicator:C_0603_HandSoldering" H 10150 2100 60  0001 C CNN
+F 3 "" H 10150 2100 60  0000 C CNN
+F 4 "X7R-G0603 100N" V 10150 2100 60  0001 C CNN "Reichelt"
+	1    10150 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L replicator:C C10
+U 1 1 563EDD0B
+P 10150 2450
+AR Path="/563EDD0B" Ref="C10"  Part="1" 
+AR Path="/5345634F/563EDD0B" Ref="C10"  Part="1" 
+F 0 "C10" V 10000 2400 50  0000 L CNN
+F 1 "100nF" V 10100 2250 50  0000 L CNN
+F 2 "replicator:C_0603_HandSoldering" H 10150 2450 60  0001 C CNN
+F 3 "" H 10150 2450 60  0000 C CNN
+F 4 "X7R-G0603 100N" V 10150 2450 60  0001 C CNN "Reichelt"
+	1    10150 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP7
+U 1 1 563EF33C
+P 7000 4650
+F 0 "RP7" H 7000 5100 50  0000 C CNN
+F 1 "3k3" H 7000 4600 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 7000 4650 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 7000 4650 60  0001 C CNN
+F 4 "BCN16 3,3K" H 7000 4650 60  0001 C CNN "Reichelt"
+	1    7000 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP8
+U 1 1 563F15F0
+P 7600 4650
+F 0 "RP8" H 7600 5100 50  0000 C CNN
+F 1 "3k3" H 7600 4600 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 7600 4650 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 7600 4650 60  0001 C CNN
+F 4 "BCN16 3,3K" H 7600 4650 60  0001 C CNN "Reichelt"
+	1    7600 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP3
+U 1 1 563F34E2
+P 3200 3250
+F 0 "RP3" H 3200 3700 50  0000 C CNN
+F 1 "10k" H 3200 3200 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3200 3250 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3200 3250 60  0001 C CNN
+F 4 "BCN16 10K" H 3200 3250 60  0001 C CNN "Reichelt"
+	1    3200 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP4
+U 1 1 563F3CBD
+P 3800 3250
+F 0 "RP4" H 3800 3700 50  0000 C CNN
+F 1 "10k" H 3800 3200 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3800 3250 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3800 3250 60  0001 C CNN
+F 4 "BCN16 10K" H 3800 3250 60  0001 C CNN "Reichelt"
+	1    3800 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP5
+U 1 1 563F6D32
+P 3200 5500
+F 0 "RP5" H 3200 5950 50  0000 C CNN
+F 1 "10k" H 3200 5450 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3200 5500 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3200 5500 60  0001 C CNN
+F 4 "BCN16 10K" H 3200 5500 60  0001 C CNN "Reichelt"
+	1    3200 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP6
+U 1 1 563F6D38
+P 3800 5500
+F 0 "RP6" H 3800 5950 50  0000 C CNN
+F 1 "10k" H 3800 5450 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3800 5500 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3800 5500 60  0001 C CNN
+F 4 "BCN16 10K" H 3800 5500 60  0001 C CNN "Reichelt"
+	1    3800 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP1
+U 1 1 563F6E76
+P 3200 1050
+F 0 "RP1" H 3200 1500 50  0000 C CNN
+F 1 "10k" H 3200 1000 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3200 1050 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3200 1050 60  0001 C CNN
+F 4 "BCN16 10K" H 3200 1050 60  0001 C CNN "Reichelt"
+	1    3200 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:R_PACK4 RP2
+U 1 1 563F6E7C
+P 3800 1050
+F 0 "RP2" H 3800 1500 50  0000 C CNN
+F 1 "10k" H 3800 1000 50  0000 C CNN
+F 2 "replicator:R_Array_Convex_4x1206" H 3800 1050 60  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B300/BCN%23BI.pdf" H 3800 1050 60  0001 C CNN
+F 4 "BCN16 10K" H 3800 1050 60  0001 C CNN "Reichelt"
+	1    3800 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L replicator:GND #PWR073
+U 1 1 563FD531
+P 2200 2550
+F 0 "#PWR073" H 2200 2550 30  0001 C CNN
+F 1 "GND" H 2200 2480 30  0001 C CNN
+F 2 "" H 2200 2550 60  0001 C CNN
+F 3 "" H 2200 2550 60  0001 C CNN
+	1    2200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR074
+U 1 1 563FD58D
+P 2200 1050
+F 0 "#PWR074" H 2200 1000 20  0001 C CNN
+F 1 "+5V" H 2200 1150 30  0000 C CNN
+F 2 "" H 2200 1050 60  0001 C CNN
+F 3 "" H 2200 1050 60  0001 C CNN
+	1    2200 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR075
+U 1 1 563FE143
+P 2200 3250
+F 0 "#PWR075" H 2200 3200 20  0001 C CNN
+F 1 "+5V" H 2200 3350 30  0000 C CNN
+F 2 "" H 2200 3250 60  0001 C CNN
+F 3 "" H 2200 3250 60  0001 C CNN
+	1    2200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:GND #PWR076
+U 1 1 563FE19F
+P 2200 4750
+F 0 "#PWR076" H 2200 4750 30  0001 C CNN
+F 1 "GND" H 2200 4680 30  0001 C CNN
+F 2 "" H 2200 4750 60  0001 C CNN
+F 3 "" H 2200 4750 60  0001 C CNN
+	1    2200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:GND #PWR077
+U 1 1 563FE9C1
+P 2200 7000
+F 0 "#PWR077" H 2200 7000 30  0001 C CNN
+F 1 "GND" H 2200 6930 30  0001 C CNN
+F 2 "" H 2200 7000 60  0001 C CNN
+F 3 "" H 2200 7000 60  0001 C CNN
+	1    2200 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:+5V #PWR078
+U 1 1 563FF310
+P 6050 4650
+F 0 "#PWR078" H 6050 4600 20  0001 C CNN
+F 1 "+5V" H 6050 4750 30  0000 C CNN
+F 2 "" H 6050 4650 60  0001 C CNN
+F 3 "" H 6050 4650 60  0001 C CNN
+	1    6050 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L replicator:GND #PWR079
+U 1 1 563FF36C
+P 6050 6150
+F 0 "#PWR079" H 6050 6150 30  0001 C CNN
+F 1 "GND" H 6050 6080 30  0001 C CNN
+F 2 "" H 6050 6150 60  0001 C CNN
+F 3 "" H 6050 6150 60  0001 C CNN
+	1    6050 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1400 9900 1750
+Wire Wire Line
+	10450 1300 10450 1400
+Wire Wire Line
+	6850 2650 6850 2750
+Wire Wire Line
+	9150 5600 9100 5600
+Wire Wire Line
+	9150 5400 9100 5400
+Wire Wire Line
+	9150 5200 9100 5200
+Wire Wire Line
+	9150 5000 9100 5000
+Wire Wire Line
+	9450 5600 9600 5600
+Wire Wire Line
+	9450 5400 9600 5400
+Wire Wire Line
+	9450 5200 9600 5200
+Wire Wire Line
+	9450 5000 9600 5000
+Connection ~ 9900 2100
+Wire Wire Line
+	9900 2100 10000 2100
+Wire Wire Line
+	9900 1400 10000 1400
+Connection ~ 10450 2100
+Wire Wire Line
+	10450 2100 10300 2100
+Wire Wire Line
+	10450 1400 10300 1400
+Wire Wire Line
+	7450 1550 7500 1550
+Wire Wire Line
+	7550 1350 7450 1350
+Wire Wire Line
+	7550 1650 7450 1650
+Wire Wire Line
+	7550 2050 7450 2050
+Wire Wire Line
+	6850 2150 6950 2150
+Wire Wire Line
+	6850 1950 6950 1950
+Wire Wire Line
+	6850 1650 6950 1650
+Wire Wire Line
+	6850 1450 6950 1450
+Wire Wire Line
+	6850 1250 6950 1250
+Wire Wire Line
+	7450 3050 7550 3050
+Wire Wire Line
+	7450 3250 7550 3250
+Wire Wire Line
+	7450 3650 7550 3650
+Wire Wire Line
+	7450 3850 7550 3850
+Wire Wire Line
+	6850 3750 6950 3750
+Wire Wire Line
+	6850 3550 6950 3550
+Wire Wire Line
+	6850 3150 6950 3150
+Wire Wire Line
+	6850 2950 6950 2950
+Wire Wire Line
+	6850 2750 6950 2750
+Wire Wire Line
+	7550 2550 7550 2650
+Wire Wire Line
+	7550 2750 7450 2750
+Wire Wire Line
+	7800 5900 7650 5900
+Wire Wire Line
+	6550 5700 7250 5700
+Wire Wire Line
+	6550 5500 7450 5500
+Wire Wire Line
+	6550 5100 6850 5100
+Wire Wire Line
+	5450 5000 5550 5000
+Wire Wire Line
+	5550 5100 5450 5100
+Wire Wire Line
+	6550 4300 6550 4400
+Wire Wire Line
+	1700 5950 1600 5950
+Wire Wire Line
+	2700 6450 3550 6450
+Wire Wire Line
+	2700 6250 3750 6250
+Wire Wire Line
+	2700 6050 2950 6050
+Wire Wire Line
+	2700 5850 3150 5850
+Wire Wire Line
+	2700 5250 2700 5150
+Wire Wire Line
+	2700 5950 3050 5950
+Wire Wire Line
+	2700 6150 2850 6150
+Wire Wire Line
+	2700 6350 3650 6350
+Wire Wire Line
+	2700 6550 3450 6550
+Wire Wire Line
+	1600 5850 1700 5850
+Wire Wire Line
+	1600 3600 1700 3600
+Wire Wire Line
+	2700 4300 3450 4300
+Wire Wire Line
+	2700 4100 3650 4100
+Wire Wire Line
+	2700 3900 2850 3900
+Wire Wire Line
+	2700 3700 3050 3700
+Wire Wire Line
+	2700 2900 2700 3000
+Wire Wire Line
+	2700 3800 2950 3800
+Wire Wire Line
+	2700 4000 3750 4000
+Wire Wire Line
+	2700 4200 3550 4200
+Wire Wire Line
+	1700 3700 1600 3700
+Wire Wire Line
+	1700 1500 1600 1500
+Wire Wire Line
+	2700 2000 3550 2000
+Wire Wire Line
+	2700 1800 3750 1800
+Wire Wire Line
+	2700 1600 2950 1600
+Wire Wire Line
+	2700 1400 3150 1400
+Wire Wire Line
+	2700 800  2700 700 
+Wire Wire Line
+	2700 1500 3050 1500
+Wire Wire Line
+	2700 1700 2850 1700
+Wire Wire Line
+	2700 1900 3650 1900
+Wire Wire Line
+	2700 2100 3450 2100
+Wire Wire Line
+	1600 1400 1700 1400
+Wire Wire Line
+	6550 5000 6950 5000
+Wire Wire Line
+	6550 5200 6750 5200
+Wire Wire Line
+	6550 5400 7550 5400
+Wire Wire Line
+	6550 5600 7350 5600
+Wire Wire Line
+	9200 5900 9100 5900
+Wire Wire Line
+	7450 2650 7550 2650
+Connection ~ 7550 2650
+Connection ~ 6850 2650
+Wire Wire Line
+	6850 3050 6950 3050
+Wire Wire Line
+	6850 3250 6950 3250
+Wire Wire Line
+	6850 3650 6950 3650
+Wire Wire Line
+	6850 3850 6950 3850
+Wire Wire Line
+	7550 3750 7450 3750
+Wire Wire Line
+	7550 3550 7450 3550
+Wire Wire Line
+	7550 3150 7450 3150
+Wire Wire Line
+	7550 2950 7450 2950
+Wire Wire Line
+	6950 1350 6850 1350
+Wire Wire Line
+	6950 1550 6850 1550
+Wire Wire Line
+	6950 1850 6850 1850
+Wire Wire Line
+	6950 2050 6850 2050
+Wire Wire Line
+	7450 2150 7550 2150
+Wire Wire Line
+	7450 1750 7550 1750
+Wire Wire Line
+	7450 1450 7550 1450
+Wire Wire Line
+	7450 1250 7550 1250
+Wire Wire Line
+	10450 2450 10300 2450
+Wire Wire Line
+	10450 1750 10300 1750
+Connection ~ 10450 1750
+Wire Wire Line
+	9900 2450 10000 2450
+Connection ~ 9900 2450
+Wire Wire Line
+	9900 1750 10000 1750
+Connection ~ 9900 1750
+Wire Wire Line
+	9600 5100 9450 5100
+Wire Wire Line
+	9600 5300 9450 5300
+Wire Wire Line
+	9600 5500 9450 5500
+Wire Wire Line
+	9600 5700 9450 5700
+Wire Wire Line
+	9100 5100 9150 5100
+Wire Wire Line
+	9100 5300 9150 5300
+Wire Wire Line
+	9100 5500 9150 5500
+Wire Wire Line
+	9100 5700 9150 5700
+Connection ~ 10450 1400
+Wire Wire Line
+	7650 5900 7650 5950
+Wire Wire Line
+	6750 2650 6850 2650
+Wire Wire Line
+	6750 2650 6750 2700
+Wire Wire Line
+	6550 5300 6650 5300
+Wire Wire Line
+	7550 4400 7550 4450
+Wire Wire Line
+	6550 4400 6650 4400
+Wire Wire Line
+	6650 4450 6650 4400
+Connection ~ 6650 4400
+Wire Wire Line
+	6750 4450 6750 4400
+Connection ~ 6750 4400
+Wire Wire Line
+	6850 4450 6850 4400
+Connection ~ 6850 4400
+Wire Wire Line
+	6950 4450 6950 4400
+Connection ~ 6950 4400
+Wire Wire Line
+	7250 4450 7250 4400
+Connection ~ 7250 4400
+Wire Wire Line
+	7350 4450 7350 4400
+Connection ~ 7350 4400
+Wire Wire Line
+	7450 4450 7450 4400
+Connection ~ 7450 4400
+Wire Wire Line
+	2700 3600 3150 3600
+Wire Wire Line
+	2700 3000 2850 3000
+Wire Wire Line
+	3750 3000 3750 3050
+Wire Wire Line
+	3650 3050 3650 3000
+Connection ~ 3650 3000
+Wire Wire Line
+	3550 3050 3550 3000
+Connection ~ 3550 3000
+Wire Wire Line
+	3450 3050 3450 3000
+Connection ~ 3450 3000
+Wire Wire Line
+	3150 3050 3150 3000
+Connection ~ 3150 3000
+Wire Wire Line
+	3050 3050 3050 3000
+Connection ~ 3050 3000
+Wire Wire Line
+	2950 3050 2950 3000
+Connection ~ 2950 3000
+Wire Wire Line
+	2850 3050 2850 3000
+Connection ~ 2850 3000
+Wire Wire Line
+	2700 5250 2850 5250
+Wire Wire Line
+	3750 5250 3750 5300
+Wire Wire Line
+	3650 5300 3650 5250
+Connection ~ 3650 5250
+Wire Wire Line
+	3550 5300 3550 5250
+Connection ~ 3550 5250
+Wire Wire Line
+	3450 5300 3450 5250
+Connection ~ 3450 5250
+Wire Wire Line
+	3150 5300 3150 5250
+Connection ~ 3150 5250
+Wire Wire Line
+	3050 5300 3050 5250
+Connection ~ 3050 5250
+Wire Wire Line
+	2950 5300 2950 5250
+Connection ~ 2950 5250
+Wire Wire Line
+	2850 5300 2850 5250
+Connection ~ 2850 5250
+Wire Wire Line
+	2700 800  2850 800 
+Wire Wire Line
+	3750 800  3750 850 
+Wire Wire Line
+	3650 850  3650 800 
+Connection ~ 3650 800 
+Wire Wire Line
+	3550 850  3550 800 
+Connection ~ 3550 800 
+Wire Wire Line
+	3450 850  3450 800 
+Connection ~ 3450 800 
+Wire Wire Line
+	3150 850  3150 800 
+Connection ~ 3150 800 
+Wire Wire Line
+	3050 850  3050 800 
+Connection ~ 3050 800 
+Wire Wire Line
+	2950 850  2950 800 
+Connection ~ 2950 800 
+Wire Wire Line
+	2850 850  2850 800 
+Connection ~ 2850 800 
+Wire Wire Line
+	1700 1700 1550 1700
+Wire Wire Line
+	1700 1900 1550 1900
+Wire Wire Line
+	1550 1900 1550 1700
+Wire Wire Line
+	1700 1800 1650 1800
+Wire Wire Line
+	2200 1100 2200 1050
+Wire Wire Line
+	2200 2500 2200 2550
+Wire Wire Line
+	1500 4000 1700 4000
+Wire Wire Line
+	1700 4100 1500 4100
+Wire Wire Line
+	1500 4100 1500 4000
+Wire Wire Line
+	2200 3250 2200 3300
+Wire Wire Line
+	2200 4700 2200 4750
+Wire Wire Line
+	2200 5500 2200 5550
+Wire Wire Line
+	2200 6950 2200 7000
+Wire Wire Line
+	1700 6150 1650 6150
+Wire Wire Line
+	1650 6150 1650 6250
+Wire Wire Line
+	1700 6350 1650 6350
+Connection ~ 1650 6350
+Wire Wire Line
+	1700 6250 1650 6250
+Connection ~ 1650 6250
+Wire Wire Line
+	6050 6150 6050 6100
+Wire Wire Line
+	6050 4700 6050 4650
+Wire Wire Line
+	5550 5500 5500 5500
+Wire Wire Line
+	5500 5400 5500 5500
+Wire Wire Line
+	5500 5400 5550 5400
+Connection ~ 5500 5500
+Wire Wire Line
+	5500 5300 5550 5300
+Wire Wire Line
+	1650 3900 1700 3900
+Wire Wire Line
+	3150 5700 3150 5850
+Connection ~ 3150 5850
+Wire Wire Line
+	3050 5700 3050 5950
+Connection ~ 3050 5950
+Wire Wire Line
+	2950 5700 2950 6050
+Connection ~ 2950 6050
+Wire Wire Line
+	2850 5700 2850 6150
+Connection ~ 2850 6150
+Wire Wire Line
+	3750 5700 3750 6250
+Connection ~ 3750 6250
+Wire Wire Line
+	3650 5700 3650 6350
+Connection ~ 3650 6350
+Wire Wire Line
+	3550 5700 3550 6450
+Connection ~ 3550 6450
+Wire Wire Line
+	3450 5700 3450 6550
+Connection ~ 3450 6550
+Wire Wire Line
+	6950 4850 6950 5000
+Connection ~ 6950 5000
+Wire Wire Line
+	6850 4850 6850 5100
+Connection ~ 6850 5100
+Wire Wire Line
+	6750 4850 6750 5200
+Connection ~ 6750 5200
+Wire Wire Line
+	6650 4850 6650 5300
+Connection ~ 6650 5300
+Wire Wire Line
+	7550 4850 7550 5400
+Connection ~ 7550 5400
+Wire Wire Line
+	7450 4850 7450 5500
+Connection ~ 7450 5500
+Wire Wire Line
+	7350 4850 7350 5600
+Connection ~ 7350 5600
+Wire Wire Line
+	7250 4850 7250 5700
+Connection ~ 7250 5700
+Wire Wire Line
+	3750 3450 3750 4000
+Connection ~ 3750 4000
+Wire Wire Line
+	3650 3450 3650 4100
+Connection ~ 3650 4100
+Wire Wire Line
+	3550 3450 3550 4200
+Connection ~ 3550 4200
+Wire Wire Line
+	3450 3450 3450 4300
+Connection ~ 3450 4300
+Wire Wire Line
+	2850 3450 2850 3900
+Connection ~ 2850 3900
+Wire Wire Line
+	2950 3450 2950 3800
+Connection ~ 2950 3800
+Wire Wire Line
+	3050 3450 3050 3700
+Connection ~ 3050 3700
+Wire Wire Line
+	3150 3450 3150 3600
+Connection ~ 3150 3600
+Wire Wire Line
+	3750 1250 3750 1800
+Connection ~ 3750 1800
+Wire Wire Line
+	3650 1250 3650 1900
+Connection ~ 3650 1900
+Wire Wire Line
+	3550 1250 3550 2000
+Connection ~ 3550 2000
+Wire Wire Line
+	3450 1250 3450 2100
+Connection ~ 3450 2100
+Wire Wire Line
+	2850 1250 2850 1700
+Connection ~ 2850 1700
+Wire Wire Line
+	2950 1250 2950 1600
+Connection ~ 2950 1600
+Wire Wire Line
+	3050 1250 3050 1500
+Connection ~ 3050 1500
+Wire Wire Line
+	3150 1250 3150 1400
+Connection ~ 3150 1400
+Wire Wire Line
+	9900 2100 9900 2450
+Wire Wire Line
+	10450 2100 10450 2450
+Wire Wire Line
+	7550 2650 7550 2750
+Wire Wire Line
+	6850 2650 6950 2650
+Wire Wire Line
+	10450 1750 10450 2100
+Wire Wire Line
+	9900 2450 9900 2550
+Wire Wire Line
+	9900 1750 9900 2100
+Wire Wire Line
+	10450 1400 10450 1750
+Wire Wire Line
+	6650 4400 6750 4400
+Wire Wire Line
+	6750 4400 6850 4400
+Wire Wire Line
+	6850 4400 6950 4400
+Wire Wire Line
+	6950 4400 7250 4400
+Wire Wire Line
+	7250 4400 7350 4400
+Wire Wire Line
+	7350 4400 7450 4400
+Wire Wire Line
+	7450 4400 7550 4400
+Wire Wire Line
+	3650 3000 3750 3000
+Wire Wire Line
+	3550 3000 3650 3000
+Wire Wire Line
+	3450 3000 3550 3000
+Wire Wire Line
+	3150 3000 3450 3000
+Wire Wire Line
+	3050 3000 3150 3000
+Wire Wire Line
+	2950 3000 3050 3000
+Wire Wire Line
+	2850 3000 2950 3000
+Wire Wire Line
+	3650 5250 3750 5250
+Wire Wire Line
+	3550 5250 3650 5250
+Wire Wire Line
+	3450 5250 3550 5250
+Wire Wire Line
+	3150 5250 3450 5250
+Wire Wire Line
+	3050 5250 3150 5250
+Wire Wire Line
+	2950 5250 3050 5250
+Wire Wire Line
+	2850 5250 2950 5250
+Wire Wire Line
+	3650 800  3750 800 
+Wire Wire Line
+	3550 800  3650 800 
+Wire Wire Line
+	3450 800  3550 800 
+Wire Wire Line
+	3150 800  3450 800 
+Wire Wire Line
+	3050 800  3150 800 
+Wire Wire Line
+	2950 800  3050 800 
+Wire Wire Line
+	2850 800  2950 800 
+Wire Wire Line
+	1650 6350 1650 6400
+Wire Wire Line
+	1650 6250 1650 6350
+Wire Wire Line
+	5500 5500 5500 5550
+Wire Wire Line
+	3150 5850 4050 5850
+Wire Wire Line
+	3050 5950 4050 5950
+Wire Wire Line
+	2950 6050 4050 6050
+Wire Wire Line
+	2850 6150 4050 6150
+Wire Wire Line
+	3750 6250 4050 6250
+Wire Wire Line
+	3650 6350 4050 6350
+Wire Wire Line
+	3550 6450 4050 6450
+Wire Wire Line
+	3450 6550 4050 6550
+Wire Wire Line
+	6950 5000 7800 5000
+Wire Wire Line
+	6850 5100 7800 5100
+Wire Wire Line
+	6750 5200 7800 5200
+Wire Wire Line
+	6650 5300 7800 5300
+Wire Wire Line
+	7550 5400 7800 5400
+Wire Wire Line
+	7450 5500 7800 5500
+Wire Wire Line
+	7350 5600 7800 5600
+Wire Wire Line
+	7250 5700 7800 5700
+Wire Wire Line
+	3750 4000 4050 4000
+Wire Wire Line
+	3650 4100 4050 4100
+Wire Wire Line
+	3550 4200 4050 4200
+Wire Wire Line
+	3450 4300 4050 4300
+Wire Wire Line
+	2850 3900 4050 3900
+Wire Wire Line
+	2950 3800 4050 3800
+Wire Wire Line
+	3050 3700 4050 3700
+Wire Wire Line
+	3150 3600 4050 3600
+Wire Wire Line
+	3750 1800 4050 1800
+Wire Wire Line
+	3650 1900 4050 1900
+Wire Wire Line
+	3550 2000 4050 2000
+Wire Wire Line
+	3450 2100 4050 2100
+Wire Wire Line
+	2850 1700 4050 1700
+Wire Wire Line
+	2950 1600 4050 1600
+Wire Wire Line
+	3050 1500 4050 1500
+Wire Wire Line
+	3150 1400 4050 1400
+$EndSCHEMATC

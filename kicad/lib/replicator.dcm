@@ -1,0 +1,137 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ATMEGA168A-P
+D PDIP28 Narrow, 16k Flash, 1kB SRAM, 512B EEPROM
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA168PA-P
+D PDIP28 Narrow, 16k Flash, 1kB SRAM, 512B EEPROM
+K AVR 8bit Microcontroller MegaAVR PicoPower
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA328-P
+D PDIP28 Narrow, 32k Flash, 2kB SRAM, 1kB EEPROM
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA328P-P
+D PDIP28 Narrow, 32k Flash, 2kB SRAM, 1kB EEPROM
+K AVR 8bit Microcontroller MegaAVR PicoPower
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA48A-P
+D PDIP28 Narrow, 4k Flash, 512B SRAM, 256B EEPROM
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA48PA-P
+D PDIP28 Narrow, 4k Flash, 512B SRAM, 256B EEPROM
+K AVR 8bit Microcontroller MegaAVR PicoPower
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA88A-P
+D PDIP28 Narrow, 8k Flash, 1kB SRAM, 512B EEPROM
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP ATMEGA88PA-P
+D PDIP28 Narrow, 8k Flash, 1kB SRAM, 512B EEPROM
+K AVR 8bit Microcontroller MegaAVR PicoPower
+F http://www.atmel.com/images/atmel-8271-8-bit-avr-microcontroller-atmega48a-48pa-88a-88pa-168a-168pa-328-328p_datasheet.pdf
+$ENDCMP
+#
+$CMP AVR-ISP-10
+D Standard IDC10 Male Connector, ISP Kanda (STK200/300)
+K IDC10 Male Connector
+$ENDCMP
+#
+$CMP C
+D Unpolarized capacitor
+$ENDCMP
+#
+$CMP CONN_01X03
+D Connector 01x03
+$ENDCMP
+#
+$CMP CONN_01X04
+D Connector 01x04
+$ENDCMP
+#
+$CMP CONN_01X05
+D Connector 01x05
+$ENDCMP
+#
+$CMP CONN_02X07
+D Connector 02x07
+$ENDCMP
+#
+$CMP CONN_02X08
+D Connector 02x08
+$ENDCMP
+#
+$CMP CONN_02X10
+D Connector 02x10
+$ENDCMP
+#
+$CMP CONN_02X13
+D Connector 02x13
+$ENDCMP
+#
+$CMP CP
+D Polarised capacitor
+$ENDCMP
+#
+$CMP LTV-356T
+D MFSOP6, DC Optocoupler, Vce 80V, CTR 50%
+K NPN DC Optocoupler
+$ENDCMP
+#
+$CMP LTV-357T
+D MFSOP6, DC Optocoupler, Vce 35V, CTR 50%
+K NPN DC Optocoupler
+$ENDCMP
+#
+$CMP LTV-358T
+D MFSOP6, DC Optocoupler, Vce 120V, CTR 50%
+K NPN DC Optocoupler
+$ENDCMP
+#
+$CMP PCF8574
+D 8 Bit Port/Expander to I2C Bus, DIP/SOIC-16
+K I2C Expander
+F http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf
+$ENDCMP
+#
+$CMP PCF8574A
+D 8 Bit Port/Expander to I2C Bus, DIP/SOIC-16
+K I2C Expander
+F http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_PACK4
+D 4 resistors Pack
+K R DEV
+$ENDCMP
+#
+$CMP VDD
+K POWER, PWR
+$ENDCMP
+#
+$CMP VSS
+K POWER, PWR
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name replicator)(type KiCad)(uri /home/mm/c-replicator/replicator.pretty)(options "")(descr ""))
+)

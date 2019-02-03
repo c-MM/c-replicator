@@ -65,13 +65,13 @@ int main (void) {
 
 
 	lcd_init();
-	snprintf_P(disp_line1, LCD_BUF, PSTR("Version:         "));
-	snprintf_P(disp_line2, LCD_BUF, PSTR("%s               "), VERSION);
+	snprintf_P(disp_line1, LCD_BUF, PSTR("Vers: %s         "), TAG);
+	snprintf_P(disp_line2, LCD_BUF, PSTR("Git: %s          "), COMMIT);
 	lcd_pos(0,0);
 	lcd_write_s(disp_line1);
 	lcd_pos(1,0);
 	lcd_write_s(disp_line2);
-	_delay_ms(1000);
+	_delay_ms(2000);
 
 	counter_init();
 

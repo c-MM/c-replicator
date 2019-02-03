@@ -48,9 +48,9 @@ EXTRAINCDIRS = ..
 #  -Wall...:  warning level
 #  -Wa,...:   tell GCC to pass this to the assembler.
 #    -ahlms:  create assembler listing
-#GIT_VERSION := $(shell git describe --abbrev=8 --dirty --always --tags)
-CFLAGS = -O$(OPT) -DF_CPU=$(F_CPU) \
-#CFLAGS += -DVERSION=\"$(GIT_VERSION)\"
+GIT_VERSION := $(shell git describe --abbrev=8 --dirty --always --tags)
+CFLAGS = -O$(OPT) -DF_CPU=$(F_CPU)
+CFLAGS += -DVERSION=\"$(GIT_VERSION)\"
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
 CFLAGS += -fpack-struct

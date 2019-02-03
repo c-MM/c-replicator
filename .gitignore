@@ -54,3 +54,6 @@ dkms.conf
 *.eep
 *.lss
 *.sym
+
+# version file
+replicator-fw/version

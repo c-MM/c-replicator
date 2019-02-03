@@ -167,8 +167,12 @@ ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
 # Default target.
-all: begin sizebefore $(TARGET).elf $(TARGET).hex $(TARGET).eep \
+all: begin sizebefore version $(TARGET).elf $(TARGET).hex $(TARGET).eep \
 	$(TARGET).lss $(TARGET).sym sizeafter end
+
+.PHONY: force
+version: force
+	echo '$(GIT_VERSION)' | cmp -s - $@ || echo '$(GIT_VERSION)' > $@
 
 # Display size of file.
 sizebefore:
@@ -222,7 +226,7 @@ fuse:
 
 # Compile: create object files from C source files.
 #$(OBJDIR)/%.o : %.c ../version
-$(OBJDIR)/%.o : %.c
+$(OBJDIR)/%.o : %.c version
 	@echo
 	@echo $(MSG_COMPILING) $<
 	@mkdir -p $(OBJDIR)/lib || true
@@ -296,5 +300,5 @@ $(shell mkdir $(OBJDIR) 2>/dev/null)
 
 
 # Listing of phony targets.
-.PHONY : all begin finish end sizebefore sizeafter gccversion coff extcoff \
+.PHONY : all begin finish end sizebefore sizeafter version gccversion coff extcoff \
 	clean clean_list program

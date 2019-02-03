@@ -65,8 +65,13 @@ int main (void) {
 
 
 	lcd_init();
-	lcd_write_s("start");
-	_delay_ms(500);
+	snprintf_P(disp_line1, LCD_BUF, PSTR("Version:         "));
+	snprintf_P(disp_line2, LCD_BUF, PSTR("%s               "), VERSION);
+	lcd_pos(0,0);
+	lcd_write_s(disp_line1);
+	lcd_pos(1,0);
+	lcd_write_s(disp_line2);
+	_delay_ms(1000);
 
 	counter_init();
 

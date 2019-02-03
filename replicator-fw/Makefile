@@ -48,7 +48,7 @@ EXTRAINCDIRS = ..
 #  -Wall...:  warning level
 #  -Wa,...:   tell GCC to pass this to the assembler.
 #    -ahlms:  create assembler listing
-GIT_VERSION := $(shell git describe --abbrev=8 --dirty --always --tags)
+GIT_VERSION := $(shell git describe --abbrev=6 --dirty="+" --always --tags)
 CFLAGS = -O$(OPT) -DF_CPU=$(F_CPU)
 CFLAGS += -DVERSION=\"$(GIT_VERSION)\"
 CFLAGS += -funsigned-char
@@ -167,12 +167,11 @@ ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
 # Default target.
-all: begin sizebefore version $(TARGET).elf $(TARGET).hex $(TARGET).eep \
+all: begin sizebefore $(TARGET).elf $(TARGET).hex $(TARGET).eep \
 	$(TARGET).lss $(TARGET).sym sizeafter end
 
-.PHONY: force
-version: force
-	echo '$(GIT_VERSION)' | cmp -s - $@ || echo '$(GIT_VERSION)' > $@
+version:
+	@echo '$(GIT_VERSION)' | cmp -s - $@ || echo '$(GIT_VERSION)' > $@
 
 # Display size of file.
 sizebefore:
@@ -216,7 +215,7 @@ fuse:
 
 
 # Link: create ELF output file from object files.
-.SECONDARY : $(TARGET).elf
+.SECONDARY : $(TARGET).elf version
 .PRECIOUS : $(OBJ)
 %.elf: $(OBJ)
 	@echo
@@ -226,7 +225,7 @@ fuse:
 
 # Compile: create object files from C source files.
 #$(OBJDIR)/%.o : %.c ../version
-$(OBJDIR)/%.o : %.c version
+$(OBJDIR)/%.o : %.c
 	@echo
 	@echo $(MSG_COMPILING) $<
 	@mkdir -p $(OBJDIR)/lib || true

@@ -195,8 +195,8 @@ static void task_dispense (void) {
 			else
 				eecounter.alien[slot]++;
 			counter_save();
-			dispense_flag &= ~DISPENSE_FREE;
 			dispense_flag &= ~DISPENSE_MEMBER;
+			dispense_flag &= ~DISPENSE_FREE;
 		}
 		if ( elapsed(&start) > 2000 ) {
 			// Error, motor couldn't start
@@ -424,6 +424,8 @@ void handle_tasks() {
 			cg_enable(1);
 		}
 		break;
+	case REP_FREE:
+		dispense_flag |= DISPENSE_FREE;
 	case REP_READY:
 		if ( i2c_keys && i2c_keys != last_keys )
 			TASKS |= TASK_DISPENSE;
@@ -434,7 +436,7 @@ void handle_tasks() {
 		}
 		if ( io_keys & 0x02 )
 			conf.mode = REP_DISABLED;
-		if ( (io_keys == 0x00) && (REP_MODE != conf.mode) ) {
+		if ( (io_keys == 0x00) && (REP_MODE != conf.mode) && (REP_MODE != REP_FREE) ) {
 			REP_MODE = conf.mode;
 			config_save();
 			cg_enable(0);

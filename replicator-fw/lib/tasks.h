@@ -25,6 +25,7 @@
 typedef enum {
     REP_DISABLED,
 	REP_READY,
+	REP_FREE,
 	REP_DEBUG,
 	REP_SETUP,
 	REP_SLOTS,

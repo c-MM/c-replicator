@@ -222,7 +222,9 @@ void menue_main (menue_main_state_t state) {
 	case MAINMENUE_READY:
 		menue_timeout = 0;
 		snprintf_P(disp_line1, LCD_BUF, PSTR("   replicator   "));
-		if (dispense_flag & DISPENSE_MEMBER)
+		if (dispense_flag & DISPENSE_FREE)
+			snprintf_P(disp_line2, LCD_BUF, PSTR("  Freiausgabe   "));
+		else if (dispense_flag & DISPENSE_MEMBER)
 			snprintf_P(disp_line2, LCD_BUF, PSTR("  memberpreice  "));
 		else if ( ! cg_change_avail() )
 			snprintf_P(disp_line2, LCD_BUF, PSTR("  paCend zahlen "));

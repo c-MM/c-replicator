@@ -56,10 +56,12 @@ int main (void) {
 	PORTB |= (_BV(PB3) | _BV(PB4));
 
 	config_init();
-	if ( PINB & _BV(PB4) )
-		REP_MODE = conf.mode;
-	else
+	if ( ( PINB & _BV(PB4) ) == 0 )
 		REP_MODE = REP_SETUP;
+	else if ( ( PINB & _BV(PB3) ) == 0 )
+		REP_MODE = REP_FREE;
+	else
+		REP_MODE = conf.mode;
 
 	cg_init();
 

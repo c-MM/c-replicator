@@ -117,7 +117,7 @@ static void task_serialrx (void) {
 			answer[x++] = conf.slots;
 			answer[x++] = (REP_MODE == REP_READY ? 1 : 0) | (cg_change_avail() << 1);
 			for ( y = 0; y < conf.slots; y++ ) {
-				answer[x++] = ( ((i2c_slots & (1<<y)) >> y) | (((i2c_motpos & (1<<y)) >> y) << 1) );
+				answer[x++] = ( ((~i2c_slots & (1<<y)) >> y) | (((~i2c_motpos & (1<<y)) >> y) << 1) );
 			}
 			serial_tx(len, answer);
 			break;

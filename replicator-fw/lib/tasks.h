@@ -38,6 +38,7 @@ typedef enum {
 	RUNNING,
 	FINISHED,
 	ERROR,
+	DENY,
 } dispense_state_t;
 
 extern uint8_t last_keys, key_valid, io_keys, i2c_keys, i2c_slots, i2c_motpos, dispense_flag;

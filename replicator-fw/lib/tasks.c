@@ -117,10 +117,18 @@ static void task_serialrx (void) {
 			answer[x++] = conf.slots;
 			answer[x++] = (REP_MODE == REP_READY ? 1 : 0) | (cg_change_avail() << 1);
 			for ( y = 0; y < conf.slots; y++ ) {
-				answer[x++] = ( ((~i2c_slots & (1<<y)) >> y) | (((~i2c_motpos & (1<<y)) >> y) << 1) );
+				answer[x++] = ( ((~i2c_slots & (1<<y)) >> y) | ((((~i2c_motpos & ~conf.slot_state) & (1<<y)) >> y) << 1) );
 			}
 			serial_tx(len, answer);
 			break;
+		case 0x37: // reset counters
+			for ( y = 0; y < 8 ; y++ ) {
+				eecounter.alien[y]  = 0;
+				eecounter.member[y] = 0;
+				eecounter.casse[y]  = 0;
+				eecounter.error[y]  = 0;
+			}
+			counter_save();
 		}
 		free(buf);
 	}
@@ -180,7 +188,7 @@ static void task_dispense (void) {
 		}
 		// Not enough money, stop the action
 		menue_main(MAINMENUE_PRICE);
-		state = ERROR;
+		state = DENY;
 		break;
 	case STARTED:
 		if ( i2c_motpos & _BV(slot) ) {
@@ -224,6 +232,9 @@ static void task_dispense (void) {
 			eecounter.error[slot]++;
 			counter_save();
 		}
+		break;
+	case DENY:
+		TASKS &= ~TASK_DISPENSE;
 		break;
 	case FINISHED:
 		// Success, motor is back on zero position

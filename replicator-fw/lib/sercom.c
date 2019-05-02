@@ -34,7 +34,7 @@ void serial_tx (uint8_t len, uint8_t* buf) {
 	uart_putchar(0xAA, (FILE*)NULL);
 	uart_putchar(len + 1 /* chksum */, (FILE*)NULL);
 	chksum += (len + 1);
-	for (uint8_t x = 0; x < (len - 1); x++) {
+	for (uint8_t x = 0; x < len; x++) {
 		uart_putchar(buf[x], (FILE*)NULL);
 		chksum += buf[x];
 	}

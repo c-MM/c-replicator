@@ -111,7 +111,7 @@ static void task_serialrx (void) {
 			serial_tx(len, answer);
 			break;
 		case 0x36: // query status
-			len = 1 + 3 + conf.slots;
+			len = 1 + 2 + conf.slots;
 			x = 0;
 			answer[x++] = 0x07;
 			answer[x++] = conf.slots;
@@ -192,7 +192,7 @@ static void task_dispense (void) {
 				eecounter.casse[slot]++;
 			else if ( dispense_flag & DISPENSE_MEMBER )
 				eecounter.member[slot]++;
-			else
+			else if ( ! (dispense_flag & DISPENSE_FORCE) )
 				eecounter.alien[slot]++;
 			counter_save();
 			dispense_flag &= ~DISPENSE_MEMBER;

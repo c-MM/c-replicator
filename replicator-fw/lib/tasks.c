@@ -19,6 +19,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
+#include <avr/wdt.h>
 #include <util/delay.h>
 #include <util/atomic.h>
 #include "board.h"
@@ -115,7 +116,7 @@ static void task_serialrx (void) {
 			x = 0;
 			answer[x++] = 0x07;
 			answer[x++] = conf.slots;
-			answer[x++] = (REP_MODE == REP_READY ? 1 : 0) | (cg_change_avail() << 1);
+			answer[x++] = ( ((REP_MODE == REP_READY) || (REP_MODE == REP_FREE))  ? 1 : 0) | (cg_change_avail() << 1);
 			for ( y = 0; y < conf.slots; y++ ) {
 				answer[x++] = ( ((~i2c_slots & (1<<y)) >> y) | ((((~i2c_motpos & ~conf.slot_state) & (1<<y)) >> y) << 1) );
 			}
@@ -129,6 +130,22 @@ static void task_serialrx (void) {
 				eecounter.error[y]  = 0;
 			}
 			counter_save();
+			break;
+		case 0x38: // control commands
+			if ( buf[2] == 0x00 ) { // disable
+				conf.mode = REP_DISABLED;
+				REP_MODE = REP_READY;
+			} else if ( buf[2] == 0x01 ) { // enable
+				conf.mode = REP_READY;
+				REP_MODE = REP_DISABLED;
+			} else if ( buf[2] == 0x02 ) { // free dispense
+				REP_MODE = REP_FREE;
+			} else if ( buf[2] == 0x03 ) { // reboot
+				MCUSR = 0;
+				wdt_enable(WDTO_15MS);
+				while (1) {};
+			}
+			break;
 		}
 		free(buf);
 	}

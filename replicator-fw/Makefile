@@ -177,7 +177,7 @@ all: begin sizebefore version.h $(TARGET).elf $(TARGET).hex $(TARGET).eep \
 .PHONY: force
 version.h: force
 	$(shell echo '#define GIT_VERSION "$(GIT_VERSION)"\n#define GIT_COMMIT "$(GIT_COMMIT)"\n#define GIT_TAG "$(GIT_TAG)"' > $(VERSION_TMP_FILE))
-	@cmp $(VERSION_TMP_FILE) version.h 2>/dev/null && rm -f $(VERSION_TMP_FILE) || mv $(VERSION_TMP_FILE) version.h
+	@cmp $(VERSION_TMP_FILE) version.h >/dev/null 2>&1 && rm -f $(VERSION_TMP_FILE) || mv $(VERSION_TMP_FILE) version.h
 
 # Display size of file.
 sizebefore:

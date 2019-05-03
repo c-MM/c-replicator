@@ -56,4 +56,4 @@ dkms.conf
 *.sym
 
 # version file
-replicator-fw/version
+replicator-fw/version.h

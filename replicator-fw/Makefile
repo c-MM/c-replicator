@@ -52,7 +52,7 @@ GIT_VERSION := $(shell git describe --long --abbrev=7 --dirty="+" --always --tag
 GIT_COMMIT := $(shell git describe --long --abbrev=7 --dirty="+" --always --tags | sed -e 's/.*-\([0-9a-z+]\+$$\)/\1/')
 GIT_TAG := $(shell git describe --long --abbrev=7 --dirty="+" --always --tags | sed -e 's/\(.*\)-[0-9a-z+]\+$$/\1/')
 CFLAGS = -O$(OPT) -DF_CPU=$(F_CPU)
-CFLAGS += -DTAG=\"$(GIT_TAG)\" -DCOMMIT=\"$(GIT_COMMIT)\"
+#CFLAGS += -DTAG=\"$(GIT_TAG)\" -DCOMMIT=\"$(GIT_COMMIT)\"
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
 CFLAGS += -fpack-struct
@@ -168,13 +168,16 @@ GENDEPFLAGS = -MMD -MP -MF .dep/$(TARGET)/$(@F).d
 ALL_CFLAGS = -mmcu=$(MCU) -I. $(CFLAGS) $(GENDEPFLAGS)
 ALL_ASFLAGS = -mmcu=$(MCU) -I. -x assembler-with-cpp $(ASFLAGS)
 
+VERSION_TMP_FILE := $(shell mktemp)
+
 # Default target.
-all: begin sizebefore $(TARGET).elf $(TARGET).hex $(TARGET).eep \
+all: begin sizebefore version.h $(TARGET).elf $(TARGET).hex $(TARGET).eep \
 	$(TARGET).lss $(TARGET).sym sizeafter end
 
 .PHONY: force
-version: force
-	@echo '$(GIT_VERSION)' | cmp -s - $@ || echo '$(GIT_VERSION)' > $@
+version.h: force
+	$(shell echo '#define GIT_VERSION "$(GIT_VERSION)"\n#define GIT_COMMIT "$(GIT_COMMIT)"\n#define GIT_TAG "$(GIT_TAG)"' > $(VERSION_TMP_FILE))
+	@cmp $(VERSION_TMP_FILE) version.h 2>/dev/null && rm -f $(VERSION_TMP_FILE) || mv $(VERSION_TMP_FILE) version.h
 
 # Display size of file.
 sizebefore:
@@ -225,10 +228,9 @@ fuse:
 	@echo $(MSG_LINKING) $@
 	$(CC) $(ALL_CFLAGS) $(OBJ) --output $@ $(LDFLAGS)
 
-
 # Compile: create object files from C source files.
 #$(OBJDIR)/%.o : %.c
-$(OBJDIR)/%.o : %.c version
+$(OBJDIR)/%.o : %.c
 	@echo
 	@echo $(MSG_COMPILING) $<
 	@mkdir -p $(OBJDIR)/lib || true
@@ -254,6 +256,7 @@ clean: begin clean_list end
 clean_list :
 	@echo
 	@echo $(MSG_CLEANING)
+	$(REMOVE) version.h
 	$(REMOVE) $(TARGET).hex
 	$(REMOVE) $(TARGET).eep
 	$(REMOVE) $(TARGET).obj

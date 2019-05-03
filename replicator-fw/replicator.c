@@ -25,6 +25,7 @@
 #include <util/atomic.h>
 #include <util/delay.h>
 #include "board.h"
+#include "version.h"
 #include "lib/timer1.h"
 #include "lib/lcd.h"
 #include "lib/pcf8574.h"
@@ -67,8 +68,8 @@ int main (void) {
 
 
 	lcd_init();
-	snprintf_P(disp_line1, LCD_BUF, PSTR("Vers: %s         "), TAG);
-	snprintf_P(disp_line2, LCD_BUF, PSTR("Git: %s          "), COMMIT);
+	snprintf_P(disp_line1, LCD_BUF, PSTR("Vers: %s         "), GIT_TAG);
+	snprintf_P(disp_line2, LCD_BUF, PSTR("Git: %s          "), GIT_COMMIT);
 	lcd_pos(0,0);
 	lcd_write_s(disp_line1);
 	lcd_pos(1,0);

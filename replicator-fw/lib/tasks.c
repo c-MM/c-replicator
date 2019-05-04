@@ -35,23 +35,23 @@
 
 volatile uint16_t TASKS;
 replicator_mode_t REP_MODE;
-uint8_t	last_keys, key_valid, io_keys, i2c_keys, i2c_slots, i2c_motpos, dispense_flag;
+uint8_t	last_keys, key_valid, io_keys, i2c_keys, i2c_slots, i2c_motpos, dispense_flag, dispense_slot;
 uint8_t leds[10];
 
 int8_t slot_selected (void) {
 	uint8_t slot = 0;
 
 	if ( ! (i2c_keys && !(i2c_keys & (i2c_keys-1))) )
-		return -1;
+		return 0;
 
-	while ( (i2c_keys & 1<<slot) == 0 ) {
+	while ( (i2c_keys & 1<<slot) == 0 && slot < conf.slots ) {
 		slot++;
 	}
 
-	if ( slot > (conf.slots - 1 ) )
-		return -1;
+	if ( slot == (conf.slots ) )
+		return 0;
 	
-	return slot;
+	return slot+1;
 }
 
 static void task_serialrx (void) {
@@ -122,14 +122,12 @@ static void task_serialrx (void) {
 			}
 			serial_tx(len, answer);
 			break;
-		case 0x37: // reset counters
-			for ( y = 0; y < 8 ; y++ ) {
-				eecounter.alien[y]  = 0;
-				eecounter.member[y] = 0;
-				eecounter.casse[y]  = 0;
-				eecounter.error[y]  = 0;
+		case 0x37: // dispense slot
+			if ( buf[2] >= 1 && buf[2] <= conf.slots ) {
+				dispense_flag |= DISPENSE_FREE;
+				dispense_slot = buf[2];
+				TASKS |= TASK_DISPENSE;
 			}
-			counter_save();
 			break;
 		case 0x38: // control commands
 			if ( buf[2] == 0x00 ) { // disable
@@ -144,6 +142,14 @@ static void task_serialrx (void) {
 				MCUSR = 0;
 				wdt_enable(WDTO_15MS);
 				while (1) {};
+			} else if ( buf[2] == 0x04 ) { // reset counters
+				for ( y = 0; y < 8 ; y++ ) {
+					eecounter.alien[y]  = 0;
+					eecounter.member[y] = 0;
+					eecounter.casse[y]  = 0;
+					eecounter.error[y]  = 0;
+				}
+				counter_save();
 			}
 			break;
 		}
@@ -156,31 +162,41 @@ static void task_serialrx (void) {
 }
 
 static void task_dispense (void) {
-	uint8_t slot;
+	static uint8_t slot;
 	static times_t start;
 	static dispense_state_t state;
 
-	slot = slot_selected();
-
 	switch (state) {
 	case NONE:
+		if ( dispense_slot ) {
+			slot = dispense_slot;
+			dispense_slot = 0;
+		} else {
+			slot = slot_selected();
+		}
+
+		if ( ! slot ) {
+			TASKS &= ~TASK_DISPENSE;
+			break;
+		}
+
 		if ( ! (dispense_flag & DISPENSE_FORCE) ) {
 			TASKS &= ~TASK_DISPENSE;
-			if ( conf.slot_state & _BV(slot) ) {
+			if ( conf.slot_state & _BV(slot-1) ) {
 				menue_main(MAINMENUE_DISABLED);
 				return;
-			} else if ( i2c_motpos & _BV(slot) ) {
+			} else if ( i2c_motpos & _BV(slot-1) ) {
 				menue_main(MAINMENUE_BLOCKED);
 				return;
-			} else if ( i2c_slots & _BV(slot) ) {
+			} else if ( i2c_slots & _BV(slot-1) ) {
 				menue_main(MAINMENUE_EMPTY);
 				return;
 			} else {
 				TASKS |= TASK_DISPENSE;
 				if ( !dispense_flag )
-					cg_price(conf.pr_alien[slot]);
+					cg_price(conf.pr_alien[slot-1]);
 				else if ( dispense_flag & DISPENSE_MEMBER )
-					cg_price(conf.pr_member[slot]);
+					cg_price(conf.pr_member[slot-1]);
 			}
 		}
 		get_time(&start);
@@ -198,9 +214,9 @@ static void task_dispense (void) {
 			state = STARTED;
 			if ( ! (dispense_flag & DISPENSE_FORCE) )
 				menue_main(MAINMENUE_DISPENSE);
-			pcf8574_set_outputs(I2C_RELAIS,_BV(slot)); // slot relais on
+			pcf8574_set_outputs(I2C_RELAIS,_BV(slot-1)); // slot relais on
 			pcf8574_set_outputs(I2C_CRTL,0x7f); // trigger triac
-			leds[slot] = LED_FAST;
+			leds[slot-1] = LED_FAST;
 			break;
 		}
 		// Not enough money, stop the action
@@ -208,17 +224,17 @@ static void task_dispense (void) {
 		state = DENY;
 		break;
 	case STARTED:
-		if ( i2c_motpos & _BV(slot) ) {
+		if ( i2c_motpos & _BV(slot-1) ) {
 			state = RUNNING;
 			if ( ! (dispense_flag & (DISPENSE_FORCE | DISPENSE_FREE)) )
 				// Motor did start, collect the money, we have only 2.5s for that
 				cg_enable(0);
 			if ( dispense_flag & DISPENSE_FREE )
-				eecounter.casse[slot]++;
+				eecounter.casse[slot-1]++;
 			else if ( dispense_flag & DISPENSE_MEMBER )
-				eecounter.member[slot]++;
+				eecounter.member[slot-1]++;
 			else if ( ! (dispense_flag & DISPENSE_FORCE) )
-				eecounter.alien[slot]++;
+				eecounter.alien[slot-1]++;
 			counter_save();
 			dispense_flag &= ~DISPENSE_MEMBER;
 			dispense_flag &= ~DISPENSE_FREE;
@@ -227,7 +243,7 @@ static void task_dispense (void) {
 			// Error, motor couldn't start
 			if ( ! (dispense_flag & DISPENSE_FORCE) )
 				menue_main(MAINMENUE_ERRSTART);
-			conf.slot_state |= _BV(slot);
+			conf.slot_state |= _BV(slot-1);
 			config_save();
 			state = ERROR;
 		}
@@ -240,15 +256,17 @@ static void task_dispense (void) {
 			state = ERROR;
 			break;
 		}
-		if ( ! (i2c_motpos & _BV(slot)) )
+		if ( ! (i2c_motpos & _BV(slot-1)) )
 			state = FINISHED;
 		break;
 	case ERROR:
 		TASKS &= ~TASK_DISPENSE;
 		if ( ! (dispense_flag & DISPENSE_FORCE) ) {
-			eecounter.error[slot]++;
+			eecounter.error[slot-1]++;
 			counter_save();
 		}
+		dispense_flag &= ~DISPENSE_MEMBER;
+		dispense_flag &= ~DISPENSE_FREE;
 		break;
 	case DENY:
 		TASKS &= ~TASK_DISPENSE;
@@ -257,8 +275,8 @@ static void task_dispense (void) {
 		// Success, motor is back on zero position
 		if ( ! (dispense_flag & DISPENSE_FORCE) )
 			menue_main(MAINMENUE_READY);
-		if ( conf.slot_state & _BV(slot) ) {
-			conf.slot_state &= ~_BV(slot);
+		if ( conf.slot_state & _BV(slot-1) ) {
+			conf.slot_state &= ~_BV(slot-1);
 			config_save();
 		}
 		TASKS &= ~TASK_DISPENSE;
@@ -271,6 +289,7 @@ static void task_dispense (void) {
 		cg_price(0);
 		cg_enable(1);
 		state = NONE;
+		slot = 0;
 		TASKS |= TASK_SETLEDS;
 		TASKS |= TASK_DISPLAY;
 		return;

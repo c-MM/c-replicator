@@ -88,7 +88,7 @@ void menue_slots (void) {
 	}
 
 	slot = slot_selected();
-	if ( (slot >= 0) && (slot < conf.slots) ) {
+	if ( (slot > 0) && (slot <= conf.slots) ) {
 		dispense_flag = DISPENSE_FORCE;
 		TASKS |= TASK_DISPENSE;
 	} else {
@@ -248,24 +248,24 @@ void menue_main (menue_main_state_t state) {
 		break;
 	case MAINMENUE_EMPTY:
 		menue_timeout = 5000;
-		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected()+1);
+		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected());
 		snprintf_P(disp_line2, LCD_BUF, PSTR(" ceine reCourcen "));
 		break;
 	case MAINMENUE_BLOCKED:
 		menue_timeout = 5000;
-		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected()+1);
+		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected());
 		snprintf_P(disp_line2, LCD_BUF, PSTR(" ist blocciert   "));
 		break;
 	case MAINMENUE_DISABLED:
 		menue_timeout = 5000;
-		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected()+1);
+		snprintf_P(disp_line1, LCD_BUF, PSTR(" fehler werc #%d "), slot_selected());
 		snprintf_P(disp_line2, LCD_BUF, PSTR(" wird bestreicct "));
 		break;
 	case MAINMENUE_PRICE:
 		menue_timeout = 2000;
 		uint8_t slot = slot_selected();
-		uint8_t alien = conf.price[conf.pr_alien[slot]-1];
-		uint8_t member = conf.price[conf.pr_member[slot]-1];
+		uint8_t alien = conf.price[conf.pr_alien[slot-1]-1];
+		uint8_t member = conf.price[conf.pr_member[slot-1]-1];
 		snprintf_P(disp_line1, LCD_BUF, PSTR(" zu wenig tocen "));
 		snprintf_P(disp_line2, LCD_BUF, PSTR("  %d.%02d / %d.%02d   "), 
 			member/10, (member%10) * 10, alien/10, (alien%10) * 10);
